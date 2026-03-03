@@ -1,0 +1,177 @@
+{
+  "Actor": {
+    "types": ["hero", "pnj"],
+    "hero": {
+      "pvi": { "value": 10, "max": 10 },
+      "pve": { "value": 10, "max": 10 },
+      "pointsMaitrise": { "value": 0, "max": 10 },
+      "personnalite": {
+        "biographie": {
+          "age": "",
+          "morphologie": "",
+          "physique": "",
+          "origine": "",
+          "histoire": "",
+          "buts": {
+            "moyen": "",
+            "long": ""
+          }
+        },
+        "traits": {
+          "positifs": [],
+          "negatifs": []
+        },
+        "carrieres": [],
+        "notes": {
+          "gen": "",
+          "pnj": "",
+          "quetes": ""
+        }
+      },
+      
+      "devise": { "sol": 350, "stusele": 0 },
+
+      "config": { "seuilCritique": 1, "initiativeAptitude": "reflexe" },
+      "meridiens": {
+        "domination": { "value": 1, "label": "Domination" },
+        "savoir": { "value": 1, "label": "Savoir" },
+        "expression": { "value": 1, "label": "Expression" },
+        "puissance": { "value": 1, "label": "Puissance" },
+        "mouvement": { "value": 1, "label": "Mouvement" },
+        "vitalite": { "value": 1, "label": "Vitalité" }
+      },
+      "atouts": [],
+      "aptitudes": {
+        "commandement": { "value": 0, "label": "Commandement", "meridien": "domination" },
+        "logique": { "value": 0, "label": "Logique", "meridien": "domination" },
+        "ruse": { "value": 0, "label": "Ruse", "meridien": "domination" },
+        "volonte": { "value": 0, "label": "Volonté", "meridien": "domination" },
+        "erudition": { "value": 0, "label": "Érudition", "meridien": "savoir" },
+        "expertise": { "value": 0, "label": "Expertise", "meridien": "savoir" },
+        "perception": { "value": 0, "label": "Perception", "meridien": "savoir" },
+        "sagesse": { "value": 0, "label": "Sagesse", "meridien": "savoir" },
+        "creativite": { "value": 0, "label": "Créativité", "meridien": "expression" },
+        "empathie": { "value": 0, "label": "Empathie", "meridien": "expression" },
+        "intuition": { "value": 0, "label": "Intuition", "meridien": "expression" },
+        "persuasion": { "value": 0, "label": "Persuasion", "meridien": "expression" },
+        "force": { "value": 0, "label": "Force", "meridien": "puissance" },
+        "intimidation": { "value": 0, "label": "Intimidation", "meridien": "puissance" },
+        "magnetisme": { "value": 0, "label": "Magnétisme", "meridien": "puissance" },
+        "vigueur": { "value": 0, "label": "Vigueur", "meridien": "puissance" },
+        "agilite": { "value": 0, "label": "Agilité", "meridien": "mouvement" },
+        "coordination": { "value": 0, "label": "Coordination", "meridien": "mouvement" },
+        "finesse": { "value": 0, "label": "Finesse", "meridien": "mouvement" },
+        "reflexe": { "value": 0, "label": "Réflexe", "meridien": "mouvement" },
+        "adaptation": { "value": 0, "label": "Adaptation", "meridien": "vitalite" },
+        "constitution": { "value": 0, "label": "Constitution", "meridien": "vitalite" },
+        "regeneration": { "value": 0, "label": "Régénération", "meridien": "vitalite" },
+        "resistance": { "value": 0, "label": "Résistance", "meridien": "vitalite" }
+      },
+      "arcanes": {
+          "arts": [], 
+          "ecole": {
+            "nom": "",
+            "rang": 1,
+            "techniques": []
+          },
+          "grimoire": {
+            "notes": "",
+            "builder": {
+              "action": "",
+              "formeCourte": false,
+              "sequence": [
+                { "cible": "", "suffixe": "" },
+                { "cible": "", "suffixe": "" },
+                { "cible": "", "suffixe": "" }
+              ]
+            }
+          }
+        }
+    }
+  },
+  "Item": {
+    "types": ["arme", "protection", "accessoire", "pierreVrill", "potion", "objet","pukllay"],
+    "arme": {
+      "bonusDegats": 0,
+      "proprietes": "",
+      "qualite": 1,
+      "sertissable": false,
+      "slotsVrill": 0,
+      "pierresSerties": "",
+      "prix": 0,
+      "equipe": false,
+      "description": ""
+    },
+    "protection": {
+      "slot": "torse",
+      "proprietes": "",
+      "qualite": 1,
+      "sertissable": false,
+      "slotsVrill": 0,
+      "pierresSerties": "",
+      "prix": 0,
+      "equipe": false,
+      "description": ""
+    },
+    "accessoire": {
+      "proprietes": "",
+      "qualite": 1,
+      "sertissable": false,
+      "slotsVrill": 0,
+      "pierresSerties": "",
+      "prix": 0,
+      "equipe": false,
+      "description": ""
+    },
+    "pierreVrill": {
+      "vertues": "",
+      "qualite": 1,
+      "bonus": 1,
+      "charges": { "value": 1, "max": 1 },
+      "effets": "",
+      "prix": 0,
+      "description": "",
+      "equipe": false,
+      "support": ""
+    },
+
+    "potion": {
+      "qualite": 1,
+      "concentration": "",
+      "duree": "",
+      "proprietes": [], 
+      "composants": [],
+      "description": "",
+      "prix": 0,
+      "poids": 0.1
+    },
+
+    "objet": {
+      "quantite": 1,
+      "poids": 0,
+      "prix": 0,
+      "qualite": 1,
+      "description": ""
+    },
+    "pukllay": {
+      "force": 1,
+      "famille": "",
+      "qualite": 1, 
+      "couleur": "neutre",
+      "directions": {
+        "n": false,
+        "ne": false,
+        "e": false,
+        "se": false,
+        "s": false,
+        "so": false,
+        "o": false,
+        "no": false
+      },
+      "pouvoirs": {
+        "actif": "",
+        "passif": ""
+      }
+    }
+  }
+}

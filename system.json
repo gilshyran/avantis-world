@@ -1,0 +1,58 @@
+{
+  "id": "avantis",
+  "title": "Avantis World",
+  "description": "Système de jeu officiel pour Avantis World",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "authors": [
+    {
+      "name": "Ours_glace",
+      "url": "www.avantis.world",
+      "email": "contact@avantis.world"
+    }
+  ],
+  "esmodules": ["avantis.mjs"],
+  "styles": ["avantis.css"],
+  "gridDistance": 1,
+  "gridUnits": "m",
+  "primaryTokenAttribute": "pvi",
+  "secondaryTokenAttribute": "pve",
+  "background": "systems/avantis/icons/Data/logo%20AW2021.png",
+  "url": "https://avantis.world",
+  "manifest": "",
+  "download": "",
+  "packs": [
+
+    {
+      "name": "heros",
+      "label": "Pré-tirés",
+      "system": "avantis",
+      "path": "packs/heros",
+      "type": "Actor"
+    },
+    {
+      "name": "atlas",
+      "label": "Atlas & Topographie",
+      "system": "avantis",
+      "path": "packs/atlas",
+      "type": "JournalEntry"
+    },
+    {
+      "name": "equipement",
+      "label": "Équipement",
+      "system": "avantis",
+      "path": "packs/equipement",
+      "type": "Item"
+    },
+    {
+      "name": "regles",
+      "label": "Règles & Lore",
+      "system": "avantis",
+      "path": "packs/regles",
+      "type": "JournalEntry"
+    }
+  ]
+}

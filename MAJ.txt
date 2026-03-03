@@ -1,0 +1,2 @@
+Mars 2026
+ajout gestion pierre de Vrill et bouton rapide sur la fiche de personnage.
