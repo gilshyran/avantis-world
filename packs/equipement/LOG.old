@@ -1,0 +1,7 @@
+2026/03/03-21:47:03.058 b30 Recovering log #179
+2026/03/03-21:47:03.064 b30 Delete type=0 #179
+2026/03/03-21:47:03.064 b30 Delete type=3 #178
+2026/03/03-21:47:37.257 1a4 Level-0 table #183: started
+2026/03/03-21:47:37.259 1a4 Level-0 table #183: 0 bytes OK
+2026/03/03-21:47:37.263 1a4 Delete type=0 #181
+2026/03/03-21:47:37.292 1a4 Manual compaction at level-0 from '!folders!12kxR1i0MuTmuZL6' @ 72057594037927935 : 1 .. '!items!zq47ygTrOCSkUNDk' @ 0 : 0; will stop at (end)

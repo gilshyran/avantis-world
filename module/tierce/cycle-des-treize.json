@@ -1,0 +1,1450 @@
+{
+  "name": "Cycle des Treize",
+  "years": {
+    "yearZero": 0,
+    "firstWeekday": 0,
+    "leapYear": null,
+    "resetWeekdays": false,
+    "allowNegativeYears": true,
+    "names": []
+  },
+  "months": {
+    "values": {
+      "hammer0000000000": {
+        "name": "Cha - Lune de la purification",
+        "abbreviation": "Cha",
+        "days": 28,
+        "leapDays": null,
+        "startingWeekday": null,
+        "ordinal": 1
+      },
+      "alturiak00000000": {
+        "name": "Yapa - Lune des semailles",
+        "abbreviation": "Yapa",
+        "days": 28,
+        "leapDays": null,
+        "startingWeekday": null,
+        "ordinal": 2
+      },
+      "ches000000000000": {
+        "name": "Coya - Lune de la plantation",
+        "abbreviation": "Coya",
+        "days": 28,
+        "leapDays": null,
+        "startingWeekday": null,
+        "ordinal": 3
+      },
+      "tarsakh000000000": {
+        "name": "Homa - Lune de la fertilité",
+        "abbreviation": "Homa",
+        "days": 28,
+        "leapDays": null,
+        "startingWeekday": null,
+        "ordinal": 4
+      },
+      "mirtul0000000000": {
+        "name": "Aya -  La Lune de la Pousse Émeraude",
+        "abbreviation": "Aya",
+        "days": 28,
+        "leapDays": null,
+        "startingWeekday": null,
+        "ordinal": 5
+      },
+      "kythorn000000000": {
+        "name": "Ray - Lune nouvelle",
+        "abbreviation": "Ray",
+        "days": 28,
+        "leapDays": null,
+        "startingWeekday": null,
+        "ordinal": 6
+      },
+      "flamerule0000000": {
+        "name": "Cama - La Lune du Jaguar",
+        "abbreviation": "Cama",
+        "days": 28,
+        "leapDays": null,
+        "startingWeekday": null,
+        "ordinal": 7
+      },
+      "eleasis000000000": {
+        "name": "Hatu - Grande lune croissante",
+        "abbreviation": "Hatu",
+        "days": 28,
+        "leapDays": null,
+        "startingWeekday": null,
+        "ordinal": 8
+      },
+      "eleint0000000000": {
+        "name": "Paca - Lune de la fleur",
+        "abbreviation": "Paca",
+        "days": 28,
+        "leapDays": null,
+        "startingWeekday": null,
+        "ordinal": 9
+      },
+      "marpenoth0000000": {
+        "name": "Ari - Lune des épis jumeaux",
+        "abbreviation": "Ari",
+        "days": 28,
+        "leapDays": null,
+        "startingWeekday": null,
+        "ordinal": 10
+      },
+      "uktar00000000000": {
+        "name": "Kusi - Lune de la sueur",
+        "abbreviation": "Kusi",
+        "days": 28,
+        "leapDays": null,
+        "startingWeekday": null,
+        "ordinal": 11
+      },
+      "nightal000000000": {
+        "name": "Aymu - Lune de la reconnaissance",
+        "abbreviation": "Aymu",
+        "days": 28,
+        "leapDays": null,
+        "startingWeekday": null,
+        "ordinal": 12
+      },
+      "XZb2YzmcRXg9vo18": {
+        "name": "Llantu - La Lune des Ombres",
+        "abbreviation": "Llantu",
+        "days": 28,
+        "leapDays": null,
+        "startingWeekday": null,
+        "ordinal": 13
+      },
+      "hr0devzl7pMpwko7": {
+        "name": "Le Jour du Zénith",
+        "abbreviation": "Sol",
+        "days": 1,
+        "leapDays": null,
+        "startingWeekday": null,
+        "ordinal": 14,
+        "type": "intercalary"
+      }
+    }
+  },
+  "days": {
+    "values": {
+      "onesday000000000": {
+        "ordinal": 1,
+        "name": "Inti P’unchaw",
+        "abbreviation": "Inti",
+        "isRestDay": false
+      },
+      "twosday000000000": {
+        "ordinal": 2,
+        "name": "Killa P’unchaw",
+        "abbreviation": "Killa",
+        "isRestDay": false
+      },
+      "threesday0000000": {
+        "ordinal": 3,
+        "name": "Yaku P’unchaw",
+        "abbreviation": "Yaku",
+        "isRestDay": false
+      },
+      "foursday00000000": {
+        "ordinal": 4,
+        "name": "Wayra P’unchaw",
+        "abbreviation": "Wayra",
+        "isRestDay": false
+      },
+      "fivesday00000000": {
+        "ordinal": 5,
+        "name": "Allpa P’unchaw",
+        "abbreviation": "Allpa",
+        "isRestDay": false
+      },
+      "sixday0000000000": {
+        "ordinal": 6,
+        "name": "Nina P’unchaw",
+        "abbreviation": "Nina",
+        "isRestDay": false
+      },
+      "sevensday0000000": {
+        "ordinal": 7,
+        "name": "Chaska P’unchaw",
+        "abbreviation": "Chaska",
+        "isRestDay": false
+      }
+    },
+    "daysPerYear": 365,
+    "hoursPerDay": 24,
+    "minutesPerHour": 60,
+    "secondsPerMinute": 60
+  },
+  "secondsPerRound": 6,
+  "seasons": {
+    "type": "dated",
+    "offset": 0,
+    "values": {
+      "spring0000000000": {
+        "name": "Saison des pluies",
+        "abbreviation": "Pluie",
+        "icon": "fas fa-seedling",
+        "color": "#90ee90",
+        "seasonalType": null,
+        "climate": null,
+        "monthStart": 1,
+        "monthEnd": 1,
+        "dayStart": null,
+        "dayEnd": null
+      },
+      "winter0000000000": {
+        "name": "Saison sèche",
+        "abbreviation": "Sèche",
+        "icon": "fas fa-snowflake",
+        "color": "#87ceeb",
+        "seasonalType": null,
+        "climate": null,
+        "monthStart": 1,
+        "monthEnd": 1,
+        "dayStart": null,
+        "dayEnd": null
+      }
+    }
+  },
+  "eras": {
+    "dalereckoning000": {
+      "name": "Ère du Renouveau",
+      "abbreviation": "AR",
+      "startYear": 1,
+      "endYear": null,
+      "format": "suffix",
+      "template": null
+    }
+  },
+  "festivals": {
+    "midwinter0000000": {
+      "name": "La fête du Soleil Dieu",
+      "description": "C’est la plus grande fête des terres de Khora. Durant cette période, la région Nord de Byblos devient l’épicentre des festivités. Culturellement les habitants de Khora se réunissent en grand nombre dans les plaines près du temple de la griffe. C’est un des rares rassemblement regroupant toutes les classes sociales.",
+      "color": "#B0C4DE",
+      "icon": "fas fa-snowflake",
+      "month": 14,
+      "day": 31,
+      "duration": 1,
+      "leapDuration": null,
+      "leapYearOnly": false,
+      "countsForWeekday": false
+    },
+    "springequinox000": {
+      "name": "La fête de Coya",
+      "description": "La fête de Coya rend grâce aux femmes et surtout aux mères, symboles de fécondité. C’est un des trois grands moments de festivités sur les terres de Khora.",
+      "color": "",
+      "icon": "",
+      "month": 3,
+      "day": 13,
+      "duration": 2,
+      "leapDuration": null,
+      "leapYearOnly": false,
+      "countsForWeekday": true
+    },
+    "XMmhfStHtI9WTlG4": {
+      "name": "La Fête du sel",
+      "description": "La fête du sel a lieu à la fin de la saison sèche, au début du mois d'Homa dans la petite cité de Maras. Cet un événement majeur coïncide avec la fin de la récolte du sel et rassemble marchands venant de tout Khora et aventuriers venant profiter des nombreuses animations proposées par la cité. Il y a notamment la célèbre course de chevaux de Maras ou encore l’épreuve de tir à l’arc rassemblant les meilleurs archers des terres connues.",
+      "color": "",
+      "icon": "",
+      "month": 4,
+      "day": 1,
+      "duration": 7,
+      "leapDuration": null,
+      "leapYearOnly": false,
+      "countsForWeekday": true
+    },
+    "csQsQrdVDVHM0jMo": {
+      "name": "La fête des esprits",
+      "description": "La fête des esprits est une festivité liée aux esprits protecteurs et notamment l’esprit de la terre et du vent qui aide le soleil à faire fuire les oiseaux pour ne pas détruire les récoltes.",
+      "color": "#38d435",
+      "icon": "fas fa-seedling",
+      "month": 4,
+      "day": 27,
+      "duration": 2,
+      "leapDuration": null,
+      "leapYearOnly": false,
+      "countsForWeekday": true
+    },
+    "861sNIC3WUXJoCNY": {
+      "name": "La fête des morts",
+      "description": "La fête des morts honore la mémoire des ancêtres",
+      "color": "",
+      "icon": "",
+      "month": 5,
+      "day": 7,
+      "duration": 1,
+      "leapDuration": null,
+      "leapYearOnly": false,
+      "countsForWeekday": true
+    },
+    "greengrass000000": {
+      "name": "Le Qhari",
+      "description": "Les enfants sont initiés à devenir des hommes. Le rituel nommé le Qhari, comprend le jeûne, les efforts symboliques et les combats. Les jeunes s'identifient aux animaux qui représentent la valeur : le serpent, le loup et le puma (ou le Feonn selon la région).",
+      "color": "#90ee90",
+      "icon": "fas fa-seedling",
+      "month": 6,
+      "day": 26,
+      "duration": 3,
+      "leapDuration": null,
+      "leapYearOnly": false,
+      "countsForWeekday": true
+    },
+    "summersolstice00": {
+      "name": "La fête du Solstice",
+      "description": "C’est la fête se passant exactement 182 jours après le Zénith, au milieu de l’année. C’est le jour où le soleil est le plus présent mais aussi un jour où la pluie est aussi très présente.\nChaque région fête le soleil et la pluie avec diverses festivités plus ou moins populaires.",
+      "color": "",
+      "icon": "",
+      "month": 7,
+      "day": 14,
+      "duration": 1,
+      "leapDuration": null,
+      "leapYearOnly": false,
+      "countsForWeekday": true
+    },
+    "highharvestide00": {
+      "name": "La fête de la lune",
+      "description": "Fête à l’origine très populaire chez les nourrisseurs, elle est moins fêtée par les autres castes.",
+      "color": "#D2691E",
+      "icon": "fas fa-wheat-awn",
+      "month": 12,
+      "day": 27,
+      "duration": 2,
+      "leapDuration": null,
+      "leapYearOnly": false,
+      "countsForWeekday": true
+    }
+  },
+  "moons": {
+    "selne00000000000": {
+      "name": "Lua",
+      "cycleLength": 30.4375,
+      "cycleDayAdjust": 0,
+      "referencePhase": 0,
+      "color": "#c0c0c0",
+      "phases": {
+        "newmoon000000000": {
+          "name": "Nouvelle Lua",
+          "rising": "",
+          "fading": "",
+          "icon": "modules/calendaria/assets/moon-phases/01_newmoon.svg",
+          "start": 0,
+          "end": 0.125
+        },
+        "waxingcrescent00": {
+          "name": "Premier Croissant",
+          "rising": "",
+          "fading": "",
+          "icon": "modules/calendaria/assets/moon-phases/02_waxingcrescent.svg",
+          "start": 0.125,
+          "end": 0.25
+        },
+        "firstquarter0000": {
+          "name": "Premier Quartier",
+          "rising": "",
+          "fading": "",
+          "icon": "modules/calendaria/assets/moon-phases/03_firstquarter.svg",
+          "start": 0.25,
+          "end": 0.375
+        },
+        "waxinggibbous000": {
+          "name": "Lua Gibbeuse",
+          "rising": "",
+          "fading": "",
+          "icon": "modules/calendaria/assets/moon-phases/04_waxinggibbous.svg",
+          "start": 0.375,
+          "end": 0.5
+        },
+        "fullmoon00000000": {
+          "name": "Lua pleine",
+          "rising": "",
+          "fading": "",
+          "icon": "modules/calendaria/assets/moon-phases/05_fullmoon.svg",
+          "start": 0.5,
+          "end": 0.625
+        },
+        "waninggibbous000": {
+          "name": "Lua Gibbeuse Décroissante",
+          "rising": "",
+          "fading": "",
+          "icon": "modules/calendaria/assets/moon-phases/06_waninggibbous.svg",
+          "start": 0.625,
+          "end": 0.75
+        },
+        "lastquarter00000": {
+          "name": "Dernier Quartier",
+          "rising": "",
+          "fading": "",
+          "icon": "modules/calendaria/assets/moon-phases/07_lastquarter.svg",
+          "start": 0.75,
+          "end": 0.875
+        },
+        "waningcrescent00": {
+          "name": "Dernier Croissant",
+          "rising": "",
+          "fading": "",
+          "icon": "modules/calendaria/assets/moon-phases/08_waningcrescent.svg",
+          "start": 0.875,
+          "end": 1
+        }
+      },
+      "referenceDate": {
+        "year": 508,
+        "month": 2,
+        "day": 1
+      },
+      "moonBrightnessMax": null
+    }
+  },
+  "cycles": {},
+  "canonicalHours": {},
+  "weeks": {
+    "enabled": false,
+    "type": "year-based",
+    "names": {}
+  },
+  "amPmNotation": {
+    "am": "Ante Meridiem",
+    "pm": "Post Meridiem",
+    "amAbbr": "AM",
+    "pmAbbr": "PM"
+  },
+  "dateFormats": {
+    "short": "D MMM",
+    "long": "D MMMM, Y",
+    "full": "MMMM D, Y",
+    "time": "HH:mm",
+    "time12": "h:mm a",
+    "weekHeader": "[Week] W [of] MMMM, Y",
+    "yearHeader": "Y",
+    "yearLabel": "Y G"
+  },
+  "metadata": {
+    "id": "custom-cycle-des-treize",
+    "description": "Le calendrier officiel d'Avantis.World, souvent appelé le Compte-Lunes, est un calendrier luni-solaire parfait. \nLes mois sont étroitement liés au cycle des lunes à tel point qu’il n’existe qu’un seul mot pour désigner les deux ; Lua.\nUne année dure 365 jours, divisée en 13 Lunes de 28 jours exactement. Le dernier jour de l'année n'appartient à aucune Lune. C'est un jour hors du temps.",
+    "author": "calendaria",
+    "system": "",
+    "exportedFrom": "calendaria",
+    "exportedAt": 1772210392974,
+    "version": "0.10.3"
+  },
+  "weather": {
+    "activeZone": "tropical-humide",
+    "zones": {
+      "LONAgyEvFV6Cwn1Q": {
+        "id": "tropical-humide",
+        "name": "Tropical humide",
+        "description": "Hot and humid year-round with frequent rain",
+        "windSpeedRange": {
+          "min": 0,
+          "max": 2
+        },
+        "windDirections": {
+          "E": 20,
+          "ENE": 15,
+          "NE": 12,
+          "ESE": 10,
+          "SE": 8,
+          "N": 5,
+          "NNE": 5,
+          "S": 5,
+          "SSE": 5,
+          "SSW": 4,
+          "NNW": 3,
+          "NW": 3,
+          "W": 2,
+          "WNW": 1,
+          "WSW": 1,
+          "SW": 1
+        },
+        "shortestDay": 11,
+        "longestDay": 13,
+        "colorShift": {
+          "dawnHue": 25,
+          "duskHue": 15,
+          "nightHue": 235,
+          "transitionMinutes": 30
+        },
+        "temperatures": {
+          "_default": {
+            "min": 24,
+            "max": 35
+          },
+          "Saison des pluies": {
+            "min": 24,
+            "max": 35
+          },
+          "Saison sèche": {
+            "min": 24,
+            "max": 35
+          }
+        },
+        "presets": {
+          "TXffD9hGiLiqAGDj": {
+            "id": "clear",
+            "enabled": true,
+            "chance": 30.77,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "HFQAZNTWfHOokpxU": {
+            "id": "partly-cloudy",
+            "enabled": true,
+            "chance": 19.23,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "u53VrhvIFtCFU125": {
+            "id": "cloudy",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "ECxH11X8CqcJzYZ5": {
+            "id": "overcast",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "3BVwapZAfjubaEMm": {
+            "id": "drizzle",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "Cvxx2B0njRVhLVSt": {
+            "id": "rain",
+            "enabled": true,
+            "chance": 26.92,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "B4lZPaIMtbd0dAL5": {
+            "id": "fog",
+            "enabled": true,
+            "chance": 7.69,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "NRHgwNYHx3KyavPe": {
+            "id": "mist",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "13fRoEueCwqpq3O1": {
+            "id": "windy",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "jQJADp8HbRPO53FZ": {
+            "id": "sunshower",
+            "enabled": true,
+            "chance": 3.85,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "refsuHAnFwB5fzVs": {
+            "id": "snow",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "mxtOzxcD1xnZD4Hy": {
+            "id": "sleet",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "Jr6CpmaAI2EglMGe": {
+            "id": "heat-wave",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "gQxTFnjqK8iGAom8": {
+            "id": "thunderstorm",
+            "enabled": true,
+            "chance": 11.54,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "BKami1WLQeN0I8EY": {
+            "id": "blizzard",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "9cKruNa3PQ8nfOHH": {
+            "id": "hail",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "I3hGiqGYp3o23eUj": {
+            "id": "tornado",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "DGcPvSPVfani3xLb": {
+            "id": "hurricane",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "UiRVoi0sJ2GZ1T9Y": {
+            "id": "ice-storm",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "ffo9JFu0HSDTJATZ": {
+            "id": "monsoon",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "ZadV1Ejr2BxQLogn": {
+            "id": "ashfall",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "txobRxEAjRs2FqvZ": {
+            "id": "sandstorm",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "GVAF5xxm7fyTpRDE": {
+            "id": "luminous-sky",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "DblahvXhjxdKkac6": {
+            "id": "sakura-bloom",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "st6StjmaQVAbBgLw": {
+            "id": "autumn-leaves",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "vg0vO5juF0vAMp26": {
+            "id": "rolling-fog",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "zOlmHIjEHP7CXxu9": {
+            "id": "wildfire-smoke",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "AMRPlq4xODPcR1tj": {
+            "id": "dust-devil",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "vod8TYfdwVa0Qfhk": {
+            "id": "black-sun",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "yMvf2Y8UU1IS7xIV": {
+            "id": "ley-surge",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "xzIrb8vYwvmHNOp7": {
+            "id": "aether-haze",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "EgB92zlZ0vU3FCWk": {
+            "id": "nullfront",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "KXubunheLUqrOVqn": {
+            "id": "permafrost-surge",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "zLOMWHqmGgklkC6T": {
+            "id": "gravewind",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "rDKVeHS3QJObO0OP": {
+            "id": "veilfall",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "lmCdx5zJCGPMm691": {
+            "id": "arcane-winds",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "hokW6HeID6JJaxf4": {
+            "id": "acid-rain",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "Ph9w3fdiLU6h77jE": {
+            "id": "blood-rain",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "8k5JUKzIHHGexa0p": {
+            "id": "meteor-shower",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "eQgoS4vlHrslLXm4": {
+            "id": "spore-cloud",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "lvA98PnKiLoJ8eLR": {
+            "id": "divine-light",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "tgjQkTmNByIbNtgw": {
+            "id": "plague-miasma",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          }
+        },
+        "seasonOverrides": {},
+        "latitude": null
+      },
+      "b1LaYDEeXhKGPCC0": {
+        "id": "tropical-d’altitude",
+        "name": "Tropical d’Altitude",
+        "description": "Warm with mild winters and wet summers",
+        "windSpeedRange": {
+          "min": 0,
+          "max": 3
+        },
+        "windDirections": {
+          "SW": 18,
+          "SSW": 15,
+          "S": 12,
+          "WSW": 10,
+          "W": 8,
+          "SE": 8,
+          "SSE": 6,
+          "E": 5,
+          "NW": 4,
+          "N": 3,
+          "NE": 3,
+          "NNE": 2,
+          "NNW": 2,
+          "WNW": 2,
+          "ENE": 1,
+          "ESE": 1
+        },
+        "shortestDay": 10,
+        "longestDay": 14,
+        "colorShift": {
+          "dawnHue": 30,
+          "duskHue": 20,
+          "nightHue": 240,
+          "transitionMinutes": 45
+        },
+        "temperatures": {
+          "_default": {
+            "min": 12,
+            "max": 28
+          },
+          "Saison des pluies": {
+            "min": 12,
+            "max": 28
+          },
+          "Saison sèche": {
+            "min": 12,
+            "max": 28
+          }
+        },
+        "presets": {
+          "TCR8RpJpovpWQu29": {
+            "id": "clear",
+            "enabled": true,
+            "chance": 28.57,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "ZEl3qQ1O3YhLCPMT": {
+            "id": "partly-cloudy",
+            "enabled": true,
+            "chance": 35.71,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "SUhhkj1MX0AGl8W8": {
+            "id": "cloudy",
+            "enabled": true,
+            "chance": 21.43,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "7KXXjkL2jaSzJpns": {
+            "id": "overcast",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "LBxIesDiEf60c4YV": {
+            "id": "drizzle",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "6Mv7yyZ3yTEEOsXx": {
+            "id": "rain",
+            "enabled": true,
+            "chance": 14.29,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "xTV3QrueN3exm9fx": {
+            "id": "fog",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "7MBMQFEoeqWOkUon": {
+            "id": "mist",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "plJKOSuWKj0TqQv4": {
+            "id": "windy",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "zLFjTz0MAuhYOTkx": {
+            "id": "sunshower",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "te0CtLMAlge1X9Nf": {
+            "id": "snow",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "vWp13STFqj8BBVRx": {
+            "id": "sleet",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "8DpLs2Ye5McEJlV5": {
+            "id": "heat-wave",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "GxCKdWHkDqj4vgjw": {
+            "id": "thunderstorm",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "psj3oodt24yOp6XT": {
+            "id": "blizzard",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "YZcCRCDsxTKCxq9G": {
+            "id": "hail",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "MvMrp2hLWZ8ZC0Ra": {
+            "id": "tornado",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "PSwePaobp4kWNY63": {
+            "id": "hurricane",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "K8YRmv5EWLKt3rZm": {
+            "id": "ice-storm",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "MRbkPtxFhqT3TSx6": {
+            "id": "monsoon",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "iwTGGPeDcE5TzWhb": {
+            "id": "ashfall",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "BpLLtXX4ICJNsrZH": {
+            "id": "sandstorm",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "D4oAQ5Ia3xH05ilW": {
+            "id": "luminous-sky",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "fP58RiVvFajopmtP": {
+            "id": "sakura-bloom",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "M6QxqGgcgiO47nKa": {
+            "id": "autumn-leaves",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "gQfhBe5soPWfYItj": {
+            "id": "rolling-fog",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "ihdKXXZzF53qikCi": {
+            "id": "wildfire-smoke",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "nXyAm1dNDcBgGrHX": {
+            "id": "dust-devil",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "UC2lEgddakb4JPtw": {
+            "id": "black-sun",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "UcNSLdIAPROFieKO": {
+            "id": "ley-surge",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "QLIG6hdsPOSQ1BYn": {
+            "id": "aether-haze",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "VoKLy3lqGpHtddDn": {
+            "id": "nullfront",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "RsRxVFTt8gVTwlXe": {
+            "id": "permafrost-surge",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "aUlPY6pYd7PeYLYd": {
+            "id": "gravewind",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "BDwEq5flL05UGwzO": {
+            "id": "veilfall",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "gozR1hGd0pKaEmld": {
+            "id": "arcane-winds",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "9GTY4GHnHTTORlDp": {
+            "id": "acid-rain",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "dWhbX0SFLaYFRO2g": {
+            "id": "blood-rain",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "t6dB52XlBoVvMRny": {
+            "id": "meteor-shower",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "5uHRp6TSRGfukP4Q": {
+            "id": "spore-cloud",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "jyXGnUuaza5Ei5E3": {
+            "id": "divine-light",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "OoLBgbcYUVhILIHs": {
+            "id": "plague-miasma",
+            "enabled": false,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          }
+        },
+        "seasonOverrides": {},
+        "latitude": null
+      },
+      "wdQgBKE36xUg4XcA": {
+        "id": "aride",
+        "name": "Désertique",
+        "description": "Hot and dry with extreme temperature swings",
+        "windSpeedRange": {
+          "min": 0,
+          "max": 4
+        },
+        "windDirections": {
+          "N": 10,
+          "NNE": 5,
+          "NE": 6,
+          "ENE": 3,
+          "E": 6,
+          "ESE": 3,
+          "SE": 5,
+          "SSE": 2,
+          "S": 5,
+          "SSW": 4,
+          "SW": 8,
+          "WSW": 5,
+          "W": 12,
+          "WNW": 8,
+          "NW": 10,
+          "NNW": 8
+        },
+        "shortestDay": 10,
+        "longestDay": 16,
+        "colorShift": {
+          "dawnHue": 35,
+          "duskHue": 25,
+          "nightHue": 250,
+          "transitionMinutes": 40
+        },
+        "temperatures": {
+          "Saison des pluies": {
+            "min": 15,
+            "max": 40
+          },
+          "Saison sèche": {
+            "min": 15,
+            "max": 40
+          }
+        },
+        "presets": {
+          "clear": {
+            "id": "clear",
+            "enabled": true,
+            "chance": 57.14,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "partly-cloudy": {
+            "id": "partly-cloudy",
+            "enabled": true,
+            "chance": 28.57,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "windy": {
+            "id": "windy",
+            "enabled": true,
+            "chance": 7.14,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "sandstorm": {
+            "id": "sandstorm",
+            "enabled": true,
+            "chance": 7.14,
+            "tempMin": null,
+            "tempMax": null
+          }
+        },
+        "seasonOverrides": {},
+        "latitude": null
+      },
+      "BMd4V2qW6IkCggd7": {
+        "id": "grands-canyons",
+        "name": "Grands Canyons",
+        "description": "Extremely cold with long winters and short summers",
+        "windSpeedRange": {
+          "min": 2,
+          "max": 5
+        },
+        "windDirections": {
+          "N": 30,
+          "NNE": 20,
+          "NE": 12,
+          "ENE": 5,
+          "E": 5,
+          "SE": 1,
+          "SSE": 1,
+          "S": 1,
+          "WSW": 1,
+          "W": 3,
+          "WNW": 3,
+          "NW": 8,
+          "NNW": 10
+        },
+        "shortestDay": 8,
+        "longestDay": 14,
+        "colorShift": {
+          "dawnHue": 230,
+          "duskHue": 250,
+          "nightHue": 240,
+          "transitionMinutes": 120
+        },
+        "temperatures": {
+          "Saison des pluies": {
+            "min": 10,
+            "max": 25
+          },
+          "Saison sèche": {
+            "min": -15,
+            "max": 15
+          }
+        },
+        "presets": {
+          "clear": {
+            "id": "clear",
+            "enabled": true,
+            "chance": 8.33,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "partly-cloudy": {
+            "id": "partly-cloudy",
+            "enabled": true,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "cloudy": {
+            "id": "cloudy",
+            "enabled": true,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "overcast": {
+            "id": "overcast",
+            "enabled": true,
+            "chance": 25,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "fog": {
+            "id": "fog",
+            "enabled": true,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "windy": {
+            "id": "windy",
+            "enabled": true,
+            "chance": 16.67,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "snow": {
+            "id": "snow",
+            "enabled": false,
+            "chance": 33.33,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "blizzard": {
+            "id": "blizzard",
+            "enabled": true,
+            "chance": 16.67,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "rolling-fog": {
+            "id": "rolling-fog",
+            "enabled": true,
+            "chance": 0,
+            "tempMin": null,
+            "tempMax": null
+          }
+        },
+        "seasonOverrides": {},
+        "latitude": null
+      },
+      "mufLRDJ9YRnM0Jpr": {
+        "id": "tropical-miasme",
+        "name": "Tropical Miasme",
+        "description": "Zone caude et humide propice aux développement de plantes rares et dangereuses.",
+        "windSpeedRange": {
+          "min": 0,
+          "max": 2
+        },
+        "windDirections": {
+          "N": 5,
+          "NNE": 5,
+          "NE": 12,
+          "ENE": 15,
+          "E": 20,
+          "ESE": 10,
+          "SE": 8,
+          "SSE": 5,
+          "S": 5,
+          "SSW": 4,
+          "SW": 1,
+          "WSW": 1,
+          "W": 2,
+          "WNW": 1,
+          "NW": 3,
+          "NNW": 3
+        },
+        "shortestDay": 11,
+        "longestDay": 16,
+        "colorShift": {
+          "dawnHue": 25,
+          "duskHue": 15,
+          "nightHue": 235,
+          "transitionMinutes": 30
+        },
+        "temperatures": {
+          "Saison des pluies": {
+            "min": 24,
+            "max": 35
+          },
+          "Saison sèche": {
+            "min": 24,
+            "max": 35
+          }
+        },
+        "presets": {
+          "clear": {
+            "id": "clear",
+            "enabled": true,
+            "chance": 30.77,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "partly-cloudy": {
+            "id": "partly-cloudy",
+            "enabled": true,
+            "chance": 19.23,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "rain": {
+            "id": "rain",
+            "enabled": true,
+            "chance": 26.92,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "fog": {
+            "id": "fog",
+            "enabled": true,
+            "chance": 7.69,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "mist": {
+            "id": "mist",
+            "enabled": true,
+            "chance": 1.27,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "sunshower": {
+            "id": "sunshower",
+            "enabled": true,
+            "chance": 3.85,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "thunderstorm": {
+            "id": "thunderstorm",
+            "enabled": true,
+            "chance": 11.54,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "wildfire-smoke": {
+            "id": "wildfire-smoke",
+            "enabled": true,
+            "chance": 1.03,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "spore-cloud": {
+            "id": "spore-cloud",
+            "enabled": true,
+            "chance": 3.02,
+            "tempMin": null,
+            "tempMax": null
+          },
+          "plague-miasma": {
+            "id": "plague-miasma",
+            "enabled": true,
+            "chance": 3.04,
+            "tempMin": null,
+            "tempMax": null
+          }
+        },
+        "seasonOverrides": {},
+        "latitude": null
+      }
+    }
+  },
+  "daylight": {
+    "enabled": true,
+    "shortestDay": 8,
+    "longestDay": 18,
+    "winterSolstice": 364,
+    "summerSolstice": 181
+  },
+  "leapYearConfig": null,
+  "cycleFormat": "",
+  "currentDate": {
+    "year": 0,
+    "month": 0,
+    "day": 3,
+    "hour": 12,
+    "minute": 0
+  }
+}
