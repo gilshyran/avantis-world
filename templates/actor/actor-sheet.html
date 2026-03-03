@@ -1,0 +1,96 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+    <header class="sheet-header">
+    
+    <div class="header-left">
+        <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}"/>
+    </div>
+
+    <div class="header-right">
+        
+        <div class="header-top-row">
+            <div class="charname-container" style="display:flex; align-items:center; gap:10px;">
+                <input name="name" type="text" value="{{actor.name}}" placeholder="Nom du Héros" class="charname-input" style="flex:1;"/>
+                
+            </div>
+            
+            <div class="rang-badge">
+                <span class="rang-label">RANG</span>
+                <span class="rang-value">{{rangCalcule}}</span>
+            </div>
+        </div>
+
+        <div class="header-bottom-row">
+            
+            <div class="stat-box pvi">
+                <label>PVI</label>
+                <div class="stat-inputs">
+                    <input type="number" name="system.pvi.value" value="{{system.pvi.value}}"/>
+                    <span class="sep">/</span>
+                    <input type="number" name="system.pvi.max" value="{{system.pvi.max}}"/>
+                </div>
+            </div>
+
+            <div class="stat-box pve">
+                <label>PVE</label>
+                <div class="stat-inputs">
+                    <input type="number" name="system.pve.value" value="{{system.pve.value}}"/>
+                    <span class="sep">/</span>
+                    <input type="number" name="system.pve.max" value="{{system.pve.max}}"/>
+                </div>
+            </div>
+
+            <div class="v-sep"></div>
+
+            <div class="stat-box maitrise">
+                <label>MAÎTRISE</label>
+                <div class="maitrise-track">
+                    {{#each maitriseBoxes as |box|}}
+                    <a class="maitrise-check {{#if box.filled}}on{{/if}}" data-index="{{box.index}}">
+                        {{#if box.filled}}<i class="fas fa-square"></i>{{else}}<i class="far fa-square"></i>{{/if}}
+                    </a>
+                    {{/each}}
+                    <input type="number" name="system.pointsMaitrise.max" value="{{system.pointsMaitrise.max}}" class="mini-max"/>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="meridiens">Méridiens</a>
+        <a class="item" data-tab="personnalite">Personnalité</a>
+        <a class="item" data-tab="inventaire">Inventaire</a>
+        <a class="item" data-tab="arcanes">Arcanes</a>
+        <a class="item" data-tab="atouts">Atouts</a>
+        <a class="item" data-tab="config"><i class="fas fa-cog"></i> Config</a>
+    </nav>
+
+    <section class="sheet-body">
+
+        <div class="tab meridiens" data-group="primary" data-tab="meridiens">
+            {{> "systems/avantis/templates/parts/tab-meridiens.html"}}
+        </div>
+
+        <div class="tab personnalite" data-group="primary" data-tab="personnalite">
+            {{> "systems/avantis/templates/parts/tab-personnalite.html"}}
+        </div>
+
+        <div class="tab inventaire" data-group="primary" data-tab="inventaire">
+            {{> "systems/avantis/templates/parts/tab-inventaire.html"}}
+        </div>
+
+        <div class="tab arcanes" data-group="primary" data-tab="arcanes">
+            {{> "systems/avantis/templates/parts/tab-arcanes.html"}}
+        </div>
+
+        <div class="tab atouts" data-group="primary" data-tab="atouts">
+            {{> "systems/avantis/templates/parts/tab-atouts.html"}}
+        </div>
+
+        <div class="tab config" data-group="primary" data-tab="config">
+            {{> "systems/avantis/templates/parts/tab-config.html"}}
+        </div>
+
+    </section>
+</form>

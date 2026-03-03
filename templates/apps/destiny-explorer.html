@@ -1,0 +1,82 @@
+<div class="avantis-destiny">
+    <div id="overlay">
+        <main id="generator-container">
+            <header>
+                <h1>La Destinée</h1>
+                <p class="narrator">Les courants du Vrill guident vos pas vers l'inconnu...</p>
+            </header>
+
+            <section id="controls-section">
+                <div class="control-group">
+                    <label>Biome Actuel</label>
+                    <select id="biome-select">
+                        <option value="Accidenté">Accidenté (Collines/Badlands)</option>
+                        <option value="Aquatique">Aquatique (Mer/Lac)</option>
+                        <option value="Désertique">Désertique (Rocaille)</option>
+                        <option value="Forêt">Forêt / Jungle</option>
+                        <option value="Donjon">Donjon (Intérieur/Grotte)</option>
+                        <option value="Mer de sable">Mer de sable (Dunes)</option>
+                        <option value="Montagne">Montagne</option>
+                        <option value="Peuplé">Peuplé (Routes/Hameaux)</option>
+                        <option value="Rivage">Rivage / Littoral</option>
+                        <option value="Steppes">Steppes / Plaines</option>
+                        <option value="Submergée">Submergée (Marécage)</option>
+                        <option value="Terres de glace">Terres de glace</option>
+                        <option value="Terres désolées">Terres désolées (Corrompu)</option>
+                    </select>
+                </div>
+                <button id="roll-destiny-btn"><i class="fas fa-dice-d20"></i> Lancer la Destinée</button>
+            </section>
+
+            <section id="results-section" class="hidden">
+                
+                <div class="destiny-grid">
+                    
+                    <div class="destiny-card d4">
+                        <div class="card-icon"><i class="fas fa-hiking"></i></div>
+                        <div class="card-title">Activité (1d4)</div>
+                        <div class="card-result" id="res-d4">...</div>
+                    </div>
+
+                    <div class="destiny-card d6">
+                        <div class="card-icon"><i class="fas fa-cloud-sun"></i></div>
+                        <div class="card-title">Ambiance (1d6)</div>
+                        <div class="card-result" id="res-d6">...</div>
+                    </div>
+
+                    <div class="destiny-card d8">
+                        <div class="card-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                        <div class="card-title">Ressource (1d8)</div>
+                        <div class="card-result" id="res-d8">...</div>
+                    </div>
+
+                    <div class="destiny-card d10">
+                        <div class="card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="card-title">Lieu (1d10)</div>
+                        <div class="card-result" id="res-d10">...</div>
+                    </div>
+
+                    <div class="destiny-card d12">
+                        <div class="card-icon"><i class="fas fa-bolt"></i></div>
+                        <div class="card-title">Événement (1d12)</div>
+                        <div class="card-result" id="res-d12">...</div>
+                    </div>
+
+                    <div class="destiny-card d20">
+                        <div class="card-icon"><i class="fas fa-bullseye"></i></div>
+                        <div class="card-title">Motivation (1d20)</div>
+                        <div class="card-result" id="res-d20">...</div>
+                    </div>
+
+                </div>
+
+                <div class="synthesis-box">
+                    <h3>Interprétation</h3>
+                    <p id="synthesis-text" class="flavor-text"></p>
+                </div>
+
+                <button id="share-chat-btn"><i class="fas fa-comment-dots"></i> Partager dans le Chat</button>
+            </section>
+        </main>
+    </div>
+</div>

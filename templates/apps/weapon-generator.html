@@ -1,0 +1,63 @@
+<div class="avantis-weapon-forge">
+    <div id="overlay">
+        <main id="generator-container">
+            <header>
+                <h1>Le Révélateur d'Armes</h1>
+                <p id="narrator-text" class="narrator">Présentez une arme à l'artisan pour en découvrir les secrets...</p>
+            </header>
+
+            <section id="controls-section">
+                <div class="control-group">
+                    <label for="weapon-type">Type d'Arme</label>
+                    <select id="weapon-type"></select>
+                </div>
+                <div class="control-group">
+                    <label for="weapon-quality">Qualité Perçue</label>
+                    <select id="weapon-quality">
+                        <option value="q0">0 - Médiocre</option>
+                        <option value="q1" selected>1 - Standard</option>
+                        <option value="q2">2 - Bonne</option>
+                        <option value="q3">3 - Supérieure</option>
+                        <option value="q4">4 - Exceptionnelle</option>
+                        <option value="legendary">Légendaire</option>
+                    </select>
+                </div>
+                <div class="control-group-checkbox">
+                    <input type="checkbox" id="master-forge-toggle">
+                    <label for="master-forge-toggle">Forge d'Héphaïstos (Manuel)</label>
+                </div>
+                <button id="generate-btn"><i class="fas fa-hammer"></i> Révéler le Potentiel</button>
+            </section>
+
+            <section id="sheet-section" class="hidden">
+                <div id="weapon-sheet">
+                    <div class="sheet-header">
+                        <input type="text" id="weapon-name" value="Nom de l'Arme">
+                        <div class="header-details">
+                            <span id="weapon-type-display">Type</span>
+                            <span>|</span>
+                            <span id="weapon-quality-display">Qualité</span>
+                            <span>|</span>
+                            <span>Prix : <strong id="weapon-price">0</strong> Sol(s)</span>
+                        </div>
+                    </div>
+                    <div id="properties-list"></div>
+                    
+                    <button id="create-item-btn"><i class="fas fa-check"></i> Forger dans l'Inventaire</button>
+                </div>
+            </section>
+
+            <div id="property-selector-modal" class="hidden">
+                 <div class="modal-content">
+                    <h3 id="property-selector-title">Forge d'Héphaïstos</h3>
+                    <p id="property-selector-info"></p>
+                    <div id="property-selector-list"></div>
+                    <div class="modal-buttons">
+                        <button id="property-selector-cancel">Annuler</button>
+                        <button id="property-selector-confirm">Forger l'Arme</button>
+                    </div>
+                 </div>
+            </div>
+        </main>
+    </div>
+</div>

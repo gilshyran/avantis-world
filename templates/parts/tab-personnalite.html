@@ -1,0 +1,129 @@
+<div class="personnalite-wrapper">
+    
+    <nav class="sub-tabs tabs" data-group="secondary">
+        <a class="item" data-tab="biographie">Biographie</a>
+        <a class="item" data-tab="traits">Traits</a>
+        <a class="item" data-tab="carrieres">Carrières</a>
+        <a class="item" data-tab="notes">Notes</a>
+    </nav>
+
+    <section class="personnalite-body">
+        
+        <div class="tab" data-group="secondary" data-tab="biographie">
+            <div class="bio-grid">
+                
+                <div class="form-group">
+                    <label>Âge</label>
+                    <input type="text" name="system.personnalite.biographie.age" value="{{system.personnalite.biographie.age}}"/>
+                </div>
+                <div class="form-group">
+                    <label>Morphologie</label>
+                    <input type="text" name="system.personnalite.biographie.morphologie" value="{{system.personnalite.biographie.morphologie}}"/>
+                </div>
+                <div class="form-group full-width">
+                    <label>Région d'Origine</label>
+                    <input type="text" name="system.personnalite.biographie.origine" value="{{system.personnalite.biographie.origine}}"/>
+                </div>
+
+                <div class="form-group full-width">
+                    <label>Description Physique</label>
+                    <textarea name="system.personnalite.biographie.physique" rows="2">{{system.personnalite.biographie.physique}}</textarea>
+                </div>
+
+                <hr class="full-width">
+
+                <div class="form-group full-width">
+                    <label>But à Moyen Terme</label>
+                    <input type="text" name="system.personnalite.biographie.buts.moyen" value="{{system.personnalite.biographie.buts.moyen}}"/>
+                </div>
+                <div class="form-group full-width">
+                    <label>But à Long Terme</label>
+                    <input type="text" name="system.personnalite.biographie.buts.long" value="{{system.personnalite.biographie.buts.long}}"/>
+                </div>
+
+                <hr class="full-width">
+
+                <div class="form-group full-width" style="flex-direction: column; align-items: flex-start;">
+                    <label style="margin-bottom:5px;">Histoire & Biographie</label>
+                    <textarea class="journal-textarea" name="system.personnalite.biographie.histoire">{{system.personnalite.biographie.histoire}}</textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab" data-group="secondary" data-tab="traits">
+            <div class="traits-grid">
+                
+                <div class="trait-column">
+                    <div class="section-header flexrow" style="background:#27ae60; color:white; padding:5px; border-radius:4px; align-items:center;">
+                        <h3 style="margin:0; border:none; color:white;"><i class="fas fa-plus-circle"></i> Traits Positifs</h3>
+                        <a class="trait-control trait-p-add" title="Ajouter un trait" style="color:white;"><i class="fas fa-plus"></i></a>
+                    </div>
+
+                    {{#each traitsPositifs as |trait i|}}
+                    <div class="trait-card" style="position:relative;">
+                        <div class="flexrow" style="align-items:center; gap:5px;">
+                            <input type="text" name="system.personnalite.traits.positifs.{{i}}.name" value="{{trait.name}}" placeholder="Nom du trait" style="font-weight:bold;"/>
+                            <a class="trait-control trait-p-delete" data-index="{{i}}" style="color:#c0392b;"><i class="fas fa-trash"></i></a>
+                        </div>
+                        <textarea name="system.personnalite.traits.positifs.{{i}}.desc" rows="2" placeholder="Description...">{{trait.desc}}</textarea>
+                    </div>
+                    {{/each}}
+                </div>
+
+                <div class="trait-column">
+                    <div class="section-header flexrow" style="background:#c0392b; color:white; padding:5px; border-radius:4px; align-items:center;">
+                        <h3 style="margin:0; border:none; color:white;"><i class="fas fa-minus-circle"></i> Traits Négatifs</h3>
+                        <a class="trait-control trait-n-add" title="Ajouter un trait" style="color:white;"><i class="fas fa-plus"></i></a>
+                    </div>
+
+                    {{#each traitsNegatifs as |trait i|}}
+                    <div class="trait-card" style="position:relative;">
+                        <div class="flexrow" style="align-items:center; gap:5px;">
+                            <input type="text" name="system.personnalite.traits.negatifs.{{i}}.name" value="{{trait.name}}" placeholder="Nom du trait" style="font-weight:bold;"/>
+                            <a class="trait-control trait-n-delete" data-index="{{i}}" style="color:#c0392b;"><i class="fas fa-trash"></i></a>
+                        </div>
+                        <textarea name="system.personnalite.traits.negatifs.{{i}}.desc" rows="2" placeholder="Description...">{{trait.desc}}</textarea>
+                    </div>
+                    {{/each}}
+                </div>
+
+            </div>
+        </div>
+
+        <div class="tab" data-group="secondary" data-tab="carrieres">
+            <div class="table-actions" style="text-align:right; margin-bottom:5px;">
+                <a class="action-btn carriere-add"><i class="fas fa-plus"></i> Ajouter une Carrière</a>
+            </div>
+            
+            <div class="carrieres-list">
+                {{#each system.personnalite.carrieres as |job i|}}
+                <div class="carriere-card">
+                    <div class="carriere-header flexrow">
+                        <input type="text" name="system.personnalite.carrieres.{{i}}.name" value="{{job.name}}" placeholder="Nom du Métier (ex: Forgeron)" style="font-weight:bold; font-size:1.1em; flex:1;"/>
+                        <a class="carriere-delete" data-index="{{i}}" style="color:#c0392b; margin-left:10px;"><i class="fas fa-trash"></i></a>
+                    </div>
+                    <textarea name="system.personnalite.carrieres.{{i}}.desc" rows="2" placeholder="Description / Période...">{{job.desc}}</textarea>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+
+        <div class="tab" data-group="secondary" data-tab="notes">
+            <div class="notes-grid">
+                <div class="note-block">
+                    <h3 class="section-header" style="background:#8c7b6c;">Notes Générales</h3>
+                    <textarea class="journal-textarea" name="system.personnalite.notes.gen">{{system.personnalite.notes.gen}}</textarea>
+                </div>
+                <div class="note-block">
+                    <h3 class="section-header" style="background:#8c7b6c;">Personnages & Rencontres</h3>
+                    <textarea class="journal-textarea" name="system.personnalite.notes.pnj">{{system.personnalite.notes.pnj}}</textarea>
+                </div>
+                <div class="note-block">
+                    <h3 class="section-header" style="background:#8c7b6c;">Quêtes & Indices</h3>
+                    <textarea class="journal-textarea" name="system.personnalite.notes.quetes">{{system.personnalite.notes.quetes}}</textarea>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</div>

@@ -1,0 +1,87 @@
+<div class="avantis-tavern-generator">
+    <div id="overlay">
+        <main id="generator-container">
+            <header>
+                <h1>Générateur de Tavernes</h1>
+                <p class="narrator">Créez un lieu mémorable pour vos aventures...</p>
+            </header>
+
+            <section id="controls-section">
+                <div class="control-row">
+                    <div class="control-group">
+                        <label>Type</label>
+                        <select id="establishment-type">
+                            <option value="Auberge">Auberge</option>
+                            <option value="Taverne">Taverne</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label>Qualité</label>
+                        <select id="service-quality">
+                            <option value="faible">Faible</option>
+                            <option value="moyenne" selected>Moyenne</option>
+                            <option value="elevee">Élevée</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label>Environnement</label>
+                        <select id="environment-type">
+                            <option value="isolé">Isolé</option>
+                            <option value="village" selected>Village</option>
+                            <option value="cité">Cité</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="control-group" style="margin-top:10px;">
+                    <label>Région (Style des Noms)</label>
+                    <select id="region-type"></select>
+                </div>
+
+                <button id="generate-btn"><i class="fas fa-beer"></i> Générer l'Établissement</button>
+            </section>
+
+            <section id="sheet-section" class="hidden">
+                <div id="tavern-sheet">
+                    <h2 id="tavern-name">Nom de l'Auberge</h2>
+                    
+                    <div class="sheet-main-grid">
+                        <div class="column-left">
+                            <img id="tavern-image" src="" alt="Image de l'établissement">
+                            <div class="description-block">
+                                <h3>Description</h3>
+                                <p><span id="structure-desc"></span> <span id="location-desc"></span></p>
+                                <p><strong>Voisin :</strong> <span id="neighbors-desc"></span></p>
+                            </div>
+                        </div>
+
+                        <div class="column-right">
+                            <div class="description-block">
+                                <h3>Personnages Clés</h3>
+                                <ul id="character-list"></ul>
+                            </div>
+                            <div class="description-block">
+                                <h3>Menu du Jour</h3>
+                                <ul id="menu-list"></ul>
+                            </div>
+                             <div class="description-block">
+                                <h3>Boissons</h3>
+                                <ul id="drinks-list"></ul>
+                            </div>
+                            <div class="description-block">
+                                <h3>Services</h3>
+                                <ul id="services-list"></ul>
+                            </div>
+                            <div class="description-block">
+                                 <h3>Rumeurs</h3>
+                                 <ul id="rumors-list"></ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button id="create-journal-btn"><i class="fas fa-book-open"></i> Créer une Entrée de Journal</button>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>

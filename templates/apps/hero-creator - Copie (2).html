@@ -1,0 +1,309 @@
+<div id="overlay">
+    <main id="creator-container">
+
+        <section id="step-genesis" class="creator-step active">
+            <p id="narrator-text" class="narrator">Tout commence par un début... Quel âge avez-vous au moment où votre aventure débute ?</p>
+            <div id="input-group-age" class="input-group">
+                <input type="number" id="hero-age" placeholder="Votre âge (min 8 ans)">
+                <button id="submit-age">Valider</button>
+            </div>
+        </section>
+
+        <section id="step-origin" class="creator-step">
+            <p id="narrator-text-origin" class="narrator"></p>
+            <div id="main-regions" class="regions-grid"></div>
+            <div id="other-regions" class="regions-grid"></div>
+            <div id="region-description-panel" class="hidden"></div>
+            <div class="navigation-buttons">
+                <button id="prev-to-genesis">Précédent</button>
+                <button id="next-to-appearance" class="hidden">Suivant</button>
+            </div>
+        </section>
+        
+        <section id="step-appearance" class="creator-step">
+            <div class="inline-narrator-group">
+                <p id="narrator-text-appearance" class="narrator"></p>
+                <select id="hero-appearance">
+                    <option value="Masculine">Masculine</option>
+                    <option value="Féminine">Féminine</option>
+                    <option value="Androgyne">Androgyne</option>
+                </select>
+            </div>
+            <div class="inline-narrator-group">
+                <p id="narrator-text-name" class="narrator"></p>
+                <input type="text" id="hero-name" class="hidden" placeholder="Nom de votre héros">
+                <button id="regenerate-name" class="hidden">Régénérer</button>
+            </div>
+            <div class="navigation-buttons">
+               <button id="prev-to-origin">Précédent</button>
+               <button id="next-to-careers">Suivant</button>
+            </div>
+        </section>
+
+        <section id="step-careers" class="creator-step">
+            <div id="period-enfance" class="career-period">
+                <h3 class="period-title">ENFANCE (8-11 ans)</h3>
+                <p id="narrator-text-career-enfance" class="narrator"></p>
+                <div class="input-group">
+                    <select id="career-choice-enfance"><option value="">-- Choisir un métier --</option></select>
+                </div>
+                <div id="career-description-panel-enfance" class="career-description-panel hidden"></div>
+                <div class="navigation-buttons">
+                    <button class="prev-period-btn" data-target="step-appearance">Précédent</button>
+                    <button class="next-period-btn" data-source="enfance">Suivant</button>
+                </div>
+            </div>
+            <div id="period-adolescence" class="career-period">
+                <h3 class="period-title">ADOLESCENCE (12-16 ans)</h3>
+                <p id="narrator-text-career-adolescence" class="narrator"></p>
+                <div class="input-group">
+                    <select id="career-choice-adolescence"><option value="">-- Choisir un métier --</option></select>
+                </div>
+                <div id="career-description-panel-adolescence" class="career-description-panel hidden"></div>
+                <div class="navigation-buttons">
+                    <button class="prev-period-btn" data-target="period-enfance">Précédent</button>
+                    <button class="next-period-btn" data-source="adolescence">Suivant</button>
+                </div>
+            </div>
+            <div id="period-jeuneAdulte" class="career-period">
+                <h3 class="period-title">JEUNE ADULTE (17-20 ans)</h3>
+                <p id="narrator-text-career-jeuneAdulte" class="narrator"></p>
+                <div class="input-group">
+                    <select id="career-choice-jeuneAdulte"><option value="">-- Choisir un métier --</option></select>
+                </div>
+                <div id="career-description-panel-jeuneAdulte" class="career-description-panel hidden"></div>
+                <div class="navigation-buttons">
+                    <button class="prev-period-btn" data-target="period-adolescence">Précédent</button>
+                    <button class="next-period-btn" data-source="jeuneAdulte">Suivant</button>
+                </div>
+            </div>
+            <div id="period-adulte" class="career-period">
+                <h3 class="period-title">ADULTE (21 ans et +)</h3>
+                <p id="narrator-text-career-adulte" class="narrator"></p>
+                <div class="input-group">
+                    <select id="career-choice-adulte"><option value="">-- Choisir un métier --</option></select>
+                </div>
+                <div id="career-description-panel-adulte" class="career-description-panel hidden"></div>
+                <div class="navigation-buttons">
+                    <button class="prev-period-btn" data-target="period-jeuneAdulte">Précédent</button>
+                    <button class="next-period-btn" data-source="adulte">Suivant</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="step-traits" class="creator-step">
+            <p id="narrator-text-morphologie" class="narrator"></p>
+            <div class="form-group">
+                <select id="hero-morphologie">
+                    <option value="">-- Choisir une morphologie --</option>
+                    <option value="Svelte">Svelte</option>
+                    <option value="Musclé">Musclé</option>
+                    <option value="Trapu">Trapu</option>
+                    <option value="Élancé">Élancé</option>
+                    <option value="Massif">Massif</option>
+                </select>
+                <textarea id="hero-description" rows="3" placeholder="Cicatrices, coiffure, signes distinctifs..."></textarea>
+            </div>
+            <p id="narrator-text-traits" class="narrator"></p>
+            <div id="traits-container">
+                <div class="traits-group">
+                    <h4>Traits Positifs</h4>
+                    <input type="text" class="trait-input-positif"><input type="text" class="trait-input-positif">
+                    <input type="text" class="trait-input-positif"><input type="text" class="trait-input-positif">
+                    <div id="positive-suggestions" class="suggestions-container"></div>
+                </div>
+                <div class="traits-group">
+                    <h4>Traits Négatifs</h4>
+                    <input type="text" class="trait-input-negatif"><input type="text" class="trait-input-negatif">
+                    <input type="text" class="trait-input-negatif"><input type="text" class="trait-input-negatif">
+                    <div id="negative-suggestions" class="suggestions-container"></div>
+                </div>
+            </div>
+            <div class="navigation-buttons">
+                <button id="prev-to-careers">Précédent</button>
+                <button id="next-to-meridiens">Suivant</button>
+            </div>
+        </section>
+
+        <section id="step-meridiens" class="creator-step">
+            <div id="main-stats-grid">
+                <div class="stat-column internal">
+                    <div class="vrill-gauge-header">
+                        <h3>MENTAL</h3>
+                        <div class="vrill-gauge"><span class="vrill-icon">🌀</span> PVI <span id="pvi-value" class="vrill-value">0</span></div>
+                    </div>
+                    <div class="meridiens-list">
+                        <div class="meridien-item" data-meridien="domination"><h4>DOMINATION</h4><div class="points-control"><button class="btn-minus">-</button><span class="score">1</span><button class="btn-plus">+</button></div></div>
+                        <div class="meridien-item" data-meridien="savoir"><h4>SAVOIR</h4><div class="points-control"><button class="btn-minus">-</button><span class="score">1</span><button class="btn-plus">+</button></div></div>
+                        <div class="meridien-item" data-meridien="expression"><h4>EXPRESSION</h4><div class="points-control"><button class="btn-minus">-</button><span class="score">1</span><button class="btn-plus">+</button></div></div>
+                    </div>
+                </div>
+                <div class="stat-column external">
+                    <div class="vrill-gauge-header">
+                        <h3>PHYSIQUE</h3>
+                        <div class="vrill-gauge"><span class="vrill-icon">🔥</span> PVE <span id="pve-value" class="vrill-value">0</span></div>
+                    </div>
+                    <div class="meridiens-list">
+                        <div class="meridien-item" data-meridien="puissance"><h4>PUISSANCE</h4><div class="points-control"><button class="btn-minus">-</button><span class="score">1</span><button class="btn-plus">+</button></div></div>
+                        <div class="meridien-item" data-meridien="mouvement"><h4>MOUVEMENT</h4><div class="points-control"><button class="btn-minus">-</button><span class="score">1</span><button class="btn-plus">+</button></div></div>
+                        <div class="meridien-item" data-meridien="vitalite"><h4>VITALITÉ</h4><div class="points-control"><button class="btn-minus">-</button><span class="score">1</span><button class="btn-plus">+</button></div></div>
+                    </div>
+                </div>
+            </div>
+            <div id="details-section">
+                <div class="detail-panel" id="reserve-panel"><h4>Réserve</h4><p id="points-reserve">0</p></div>
+                <div class="detail-panel hidden" id="vrill-arts-panel"><h4 id="vrill-arts-narrator"></h4><div id="vrill-arts-list"></div></div>
+            </div>
+            <div id="aptitudes-section">
+                <h3 id="narrator-text-aptitudes" class="narrator"></h3>
+                <p class="aptitude-points-counter">Points d'aptitude : <span id="aptitude-points-remaining">2</span></p>
+                <div id="aptitudes-layout">
+                    <div id="meridian-aptitudes-column">
+                        <div id="aptitude-row-1" class="aptitude-row"></div>
+                        <div id="aptitude-row-2" class="aptitude-row"></div>
+                    </div>
+                    <div id="arcane-aptitudes-column"></div>
+                </div>
+            </div>
+            <div class="navigation-buttons">
+                <button id="prev-to-traits">Précédent</button>
+                <button id="next-to-objectives">Suivant</button>
+            </div>
+        </section>
+
+        <section id="step-objectives" class="creator-step">
+            <p id="narrator-text-objectives" class="narrator"></p>
+            <div class="objectives-container">
+                <div class="objective-group"><label>Moyen terme</label><textarea id="objective-medium" rows="4"></textarea></div>
+                <div class="objective-group"><label>Long terme</label><textarea id="objective-long" rows="4"></textarea></div>
+            </div>
+            <div class="navigation-buttons">
+                <button id="prev-to-meridiens">Précédent</button>
+                <button id="next-to-weapon">Suivant</button>
+            </div>
+        </section>
+
+        <section id="step-weapon" class="creator-step">
+            <p id="narrator-text-weapon" class="narrator"></p>
+            <div class="weapon-selection-grid">
+                <div class="form-group-column">
+                    <label>Arme</label>
+                    <select id="weapon-select" class="custom-select"></select>
+                </div>
+                <div class="form-group-column">
+                    <label>Propriété 1</label>
+                    <select id="property-select-1" class="property-select custom-select"></select>
+                </div>
+                <div class="form-group-column">
+                    <label>Propriété 2</label>
+                    <select id="property-select-2" class="property-select custom-select"></select>
+                </div>
+            </div>
+            <div id="weapon-props-description" class="hidden" style="background:rgba(0,0,0,0.5); padding:10px; border-radius:5px; margin-top:10px; font-style:italic;"></div>
+            <div class="weapon-details-container">
+                <div id="weapon-naming-section">
+                    <p class="narrator small-narrator">Nommez votre arme...</p>
+                    <div class="input-group">
+                        <input type="text" id="custom-weapon-name" placeholder="Nom de votre arme...">
+                        <button id="generate-weapon-name">Aléatoire</button>
+                    </div>
+                </div>
+            </div>
+            <div class="navigation-buttons">
+                <button id="prev-to-objectives">Précédent</button>
+                <button id="next-to-shop">Suivant</button>
+            </div>
+        </section>
+        
+        <section id="step-shop" class="creator-step">
+            <p id="narrator-text-shop" class="narrator"></p>
+            
+            <div id="shop-initial-choice" class="shop-view">
+                <button id="shop-choice-kits-btn" class="choice-button">Choisir un Kit Prédéfini</button>
+                <button id="shop-choice-manual-btn" class="choice-button">Entrer dans la Boutique</button>
+            </div>
+
+            <div id="shop-kits-view" class="shop-view hidden">
+                <div class="form-group-column">
+                    <label>Kit de départ</label>
+                    <select id="kit-select" class="custom-select"></select>
+                </div>
+                <div id="kit-description-panel" class="description-panel hidden" style="background:rgba(0,0,0,0.5); padding:10px; margin-top:10px;"></div>
+            </div>
+
+            <div id="shop-manual-view" class="shop-view hidden">
+                <div id="shop-header">
+                    <p style="margin-bottom:10px;">Le marchand vous salue. "Jetez un œil, j'ai quelques belles pièces aujourd'hui..."</p>
+                    <div id="shop-budget-display">
+                        Sol Restants : <input type="number" id="shop-budget-input" value="400" style="width:80px; text-align:center; font-weight:bold; color:#e67e22; background:rgba(0,0,0,0.5); border:1px solid #666;">
+                    </div>
+                </div>
+                
+                <div id="shop-inventory" style="display:flex; gap:20px; text-align:left; margin-top:15px;">
+                    <div class="inventory-column" style="flex:1;">
+                        <h4 style="border-bottom:1px solid #777; color:#aaffee;">Armes</h4>
+                        <div id="shop-weapons-list" class="item-list"></div>
+                    </div>
+                    <div class="inventory-column" style="flex:1;">
+                        <h4 style="border-bottom:1px solid #777; color:#aaffee;">Protections</h4>
+                        <div id="shop-protections-list" class="item-list"></div>
+                    </div>
+                    <div class="inventory-column" style="flex:1;">
+                        <h4 style="border-bottom:1px solid #777; color:#aaffee;">Divers</h4>
+                        <div id="shop-misc-list" class="item-list"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navigation-buttons">
+                <button id="prev-to-weapon">Précédent</button>
+                <button id="next-to-atout">Suivant</button>
+            </div>
+        </section>
+
+        <section id="step-atout" class="creator-step">
+            <p id="narrator-text-atout" class="narrator"></p>
+            <div id="atout-container">
+                <div id="atout-draw-view">
+                    <div class="card-back"></div>
+                    <button id="draw-atout-btn" class="choice-button">Piocher</button>
+                </div>
+                <div id="atout-reveal-view" class="hidden">
+                    <div class="card-front"><img id="atout-image" src=""></div>
+                    <div class="atout-description">
+                        <h3 id="atout-name"></h3>
+                        <p id="atout-desc-text"></p>
+                    </div>
+                </div>
+            </div>
+            <div id="atout-navigation" class="navigation-buttons hidden">
+                <button id="prev-from-atout-to-shop">Précédent</button>
+                <button id="next-to-summary">Voir la Fiche</button>
+            </div>
+        </section>
+        
+        <section id="step-summary" class="creator-step">
+            <div id="character-sheet-container">
+                <div class="sheet-page" id="sheet-page-1">
+                    <div class="sheet-header">
+                        <div class="header-block"><h3>Nom</h3><div id="summary-hero-name"></div></div>
+                        <div class="header-block"><div>PVI <input id="summary-pvi"></div><div>PVE <input id="summary-pve"></div></div>
+                    </div>
+                    <div class="sheet-body-grid">
+                        <div class="sheet-main-column">
+                            <div class="sheet-block"><h4>Traits</h4><div id="summary-traits-pos"></div><div id="summary-traits-neg"></div></div>
+                        </div>
+                        <div class="sheet-main-column">
+                            <div class="sheet-block"><h4>Carrières</h4><div id="summary-careers-list"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navigation-buttons">
+                <button id="prev-from-summary-to-atout">Précédent</button>
+                <button id="create-actor-btn" style="background-color: #27ae60;">CRÉER LE PERSONNAGE</button>
+            </div>
+        </section>
+
+    </main>
+</div>

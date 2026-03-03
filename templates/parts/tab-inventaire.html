@@ -1,0 +1,263 @@
+<div class="inventory-wrapper">
+
+    <h3 class="section-header" style="margin-top:0;"><i class="fas fa-fist-raised" style="margin-right:8px;"></i> ARMES ÉQUIPÉES</h3>
+    <table class="sheet-table">
+        <thead>
+            <tr>
+                <th width="40"></th>
+                <th>Nom</th>
+                <th>Propriétés</th>
+                <th width="60" style="text-align:center;">Dégâts</th>
+                <th width="50" style="text-align:center;">Qualité</th>
+                <th width="30" style="text-align:center;"><i class="fas fa-gem" title="Sertie ?"></i></th>
+                <th width="30" style="text-align:center;"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each equipped.weapons as |item|}}
+            <tr class="item" data-item-id="{{item._id}}" style="background: var(--color-equipped-weapon-bg);">
+                <td><img src="{{item.img}}"/></td>
+                <td class="item-edit clickable quality-{{item.system.qualite}}"><b>{{item.name}}</b></td>
+                <td style="font-size: 0.9em; font-style: italic; color: #444;">{{item.system.proprietes}}</td>
+                <td style="text-align:center; font-weight:bold;">
+                    {{#if item.system.bonusDegats}}+{{item.system.bonusDegats}}{{else}}-{{/if}}
+                </td>
+                <td style="text-align:center;" class="quality-{{item.system.qualite}}">Q{{item.system.qualite}}</td>
+                <td style="text-align:center;">
+                    {{#if item.system.pierresSerties}}
+                        <i class="fas fa-gem" style="color: #9b59b6;" title="{{item.system.pierresSerties}}"></i>
+                    {{else}}
+                        {{#if item.system.sertissable}}
+                        <i class="far fa-circle" style="color: #ccc; font-size:0.8em;" title="Vide"></i>
+                        {{/if}}
+                    {{/if}}
+                </td>
+                <td style="text-align:center;">
+                    <a class="item-control item-toggle" title="Ranger"><i class="fas fa-arrow-down"></i></a>
+                </td>
+            </tr>
+            {{/each}}
+            {{#unless equipped.weapons}}
+            <tr><td colspan="7" style="font-style:italic; color:#777; text-align:center; padding:5px;">Aucune arme en main.</td></tr>
+            {{/unless}}
+        </tbody>
+    </table>
+
+    <h3 class="section-header"><i class="fas fa-tshirt" style="margin-right:8px;"></i> Armures Portées</h3>
+    <table class="sheet-table">
+        <thead>
+            <tr>
+                <th width="40"></th>
+                <th>Nom</th>
+                <th>Emplacement</th>
+                <th>Propriétés</th>
+                <th width="50" style="text-align:center;">Qualité</th>
+                <th width="30" style="text-align:center;"><i class="fas fa-gem"></i></th>
+                <th width="30" style="text-align:center;"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each equipped.armor as |item|}}
+            <tr class="item" data-item-id="{{item._id}}" style="background: var(--color-equipped-armor-bg);">
+                <td><img src="{{item.img}}"/></td>
+                <td class="item-edit clickable quality-{{item.system.qualite}}"><b>{{item.name}}</b></td>
+                <td>{{item.system.slot}}</td>
+                <td style="font-size: 0.9em; font-style: italic;">{{item.system.proprietes}}</td>
+                <td style="text-align:center;" class="quality-{{item.system.qualite}}">Q{{item.system.qualite}}</td>
+                <td style="text-align:center;">
+                    {{#if item.system.pierresSerties}}
+                        <i class="fas fa-gem" style="color: #9b59b6;" title="{{item.system.pierresSerties}}"></i>
+                    {{/if}}
+                </td>
+                <td style="text-align:center;">
+                    <a class="item-control item-toggle" title="Retirer"><i class="fas fa-arrow-down"></i></a>
+                </td>
+            </tr>
+            {{/each}}
+            {{#unless equipped.armor}}
+            <tr><td colspan="7" style="font-style:italic; color:#777; text-align:center; padding:5px;">Aucune armure portée.</td></tr>
+            {{/unless}}
+        </tbody>
+    </table>
+
+    <h3 class="section-header"><i class="fas fa-ring" style="margin-right:8px;"></i> Accessoires</h3>
+    <table class="sheet-table">
+        <thead>
+            <tr>
+                <th width="40"></th>
+                <th>Nom</th>
+                <th>Propriétés</th>
+                <th width="50" style="text-align:center;">Qualité</th>
+                <th width="30" style="text-align:center;"><i class="fas fa-gem"></i></th>
+                <th width="30" style="text-align:center;"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each equipped.accessories as |item|}}
+            <tr class="item" data-item-id="{{item._id}}" style="background: rgba(255, 215, 0, 0.1);">
+                <td><img src="{{item.img}}"/></td>
+                <td class="item-edit clickable quality-{{item.system.qualite}}"><b>{{item.name}}</b></td>
+                <td style="font-size: 0.9em; font-style: italic;">{{item.system.proprietes}}</td>
+                <td style="text-align:center;" class="quality-{{item.system.qualite}}">Q{{item.system.qualite}}</td>
+                <td style="text-align:center;">
+                    {{#if item.system.pierresSerties}}
+                        <i class="fas fa-gem" style="color: #9b59b6;" title="{{item.system.pierresSerties}}"></i>
+                    {{/if}}
+                </td>
+                <td style="text-align:center;">
+                    <a class="item-control item-toggle" title="Retirer"><i class="fas fa-arrow-down"></i></a>
+                </td>
+            </tr>
+            {{/each}}
+            {{#unless equipped.accessories}}
+            <tr><td colspan="6" style="font-style:italic; text-align:center; color:#777;">Aucun accessoire.</td></tr>
+            {{/unless}}
+        </tbody>
+    </table>
+
+    <h3 class="section-header"><i class="fas fa-gem" style="margin-right:8px;"></i> Pierres de Vrill Serties</h3>
+    <table class="sheet-table">
+        <thead>
+            <tr>
+                <th width="40"></th>
+                <th>Nom de la Pierre</th>
+                <th>Sertie sur...</th>
+                <th width="100" style="text-align:center;">Charges</th>
+                <th width="30" style="text-align:center;"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each equippedStones as |item|}}
+            <tr class="item" data-item-id="{{item._id}}" style="background: rgba(155, 89, 182, 0.1);">
+                <td><img src="{{item.img}}"/></td>
+                <td class="item-edit clickable"><b>{{item.name}} <span style="color:#9b59b6;">(+{{item.system.bonus}})</span></b></td>
+                <td style="font-size: 0.9em; font-style: italic;">{{item.system.support}}</td>
+                <td style="text-align:center; font-weight:bold;">{{item.system.charges.value}} / {{item.system.charges.max}}</td>
+                <td style="text-align:center;">
+                    <a class="item-control item-toggle" title="Désertir (Remettre dans le sac)"><i class="fas fa-arrow-down"></i></a>
+                </td>
+            </tr>
+            {{/each}}
+            {{#unless equippedStones}}
+            <tr><td colspan="5" style="font-style:italic; text-align:center; color:#777;">Aucune pierre n'est sertie sur votre équipement.</td></tr>
+            {{/unless}}
+        </tbody>
+    </table>
+
+    <hr style="border: 0; border-top: 2px dashed #ccc; margin: 25px 0 10px 0;">
+
+    <div class="section-header-row">
+        <h3><i class="fas fa-suitcase" style="margin-right:8px;"></i> Sac à Dos</h3>
+        
+        <div class="currency-container-inline">
+            <div class="currency-item">
+                <i class="fas fa-coins coin-sol" title="Sols (Or)"></i>
+                <input type="number" name="system.devise.sol" value="{{system.devise.sol}}" min="0" data-dtype="Number"/>
+                <span class="currency-label">Sols</span>
+            </div>
+            <div class="currency-item" style="border-left:1px solid rgba(255,255,255,0.3); padding-left:10px;">
+                <i class="fas fa-coins coin-stu" title="Stuseles (Argent)"></i>
+                <input type="number" name="system.devise.stusele" value="{{system.devise.stusele}}" min="0" data-dtype="Number"/>
+                <span class="currency-label">Stuseles</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-actions" style="margin-bottom:5px; text-align:right;">
+        <a class="item-control item-create" data-type="arme" title="Créer Arme"><i class="fas fa-plus"></i> <i class="fas fa-sword"></i></a> | 
+        <a class="item-control item-create" data-type="protection" title="Créer Armure"><i class="fas fa-plus"></i> <i class="fas fa-shield-alt"></i></a> | 
+        <a class="item-control item-create" data-type="accessoire" title="Créer Accessoire"><i class="fas fa-plus"></i> <i class="fas fa-ring"></i></a> | 
+        <a class="item-control item-create" data-type="pierreVrill" title="Créer Pierre Vrill"><i class="fas fa-plus"></i> <i class="fas fa-gem"></i></a> | 
+        <a class="item-control item-create" data-type="objet" title="Créer Objet"><i class="fas fa-plus"></i> <i class="fas fa-box"></i></a>
+    </div>
+
+    <table class="sheet-table">
+        <thead>
+            <tr>
+                <th width="40"></th>
+                <th>Nom</th>
+                <th>Type</th>
+                <th width="40" style="text-align:center;">Qté</th>
+                <th width="50" style="text-align:center;">Qualité</th>
+                <th width="50" style="text-align:right;">Prix</th>
+                <th width="60" style="text-align:right;">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            {{#each inventory.weapons as |item|}}
+            <tr class="item" data-item-id="{{item._id}}">
+                <td><img src="{{item.img}}"/></td>
+                <td class="item-edit clickable quality-{{item.system.qualite}}">{{item.name}}</td>
+                <td style="color:#666; font-size:0.9em;">Arme</td>
+                <td style="text-align:center;">1</td>
+                <td style="text-align:center;" class="quality-{{item.system.qualite}}">Q{{item.system.qualite}}</td>
+                <td style="text-align:right;">{{item.system.prix}} S</td>
+                <td class="controls-cell">
+                    <a class="item-control item-toggle" title="Équiper"><i class="far fa-circle"></i></a>
+                    <a class="item-control item-delete"><i class="fas fa-trash"></i></a>
+                </td>
+            </tr>
+            {{/each}}
+
+            {{#each inventory.armor as |item|}}
+            <tr class="item" data-item-id="{{item._id}}">
+                <td><img src="{{item.img}}"/></td>
+                <td class="item-edit clickable quality-{{item.system.qualite}}">{{item.name}}</td>
+                <td style="color:#666; font-size:0.9em;">Armure ({{item.system.slot}})</td>
+                <td style="text-align:center;">1</td>
+                <td style="text-align:center;" class="quality-{{item.system.qualite}}">Q{{item.system.qualite}}</td>
+                <td style="text-align:right;">{{item.system.prix}} S</td>
+                <td class="controls-cell">
+                    <a class="item-control item-toggle" title="Enfiler"><i class="far fa-circle"></i></a>
+                    <a class="item-control item-delete"><i class="fas fa-trash"></i></a>
+                </td>
+            </tr>
+            {{/each}}
+
+            {{#each inventory.accessories as |item|}}
+            <tr class="item" data-item-id="{{item._id}}">
+                <td><img src="{{item.img}}"/></td>
+                <td class="item-edit clickable quality-{{item.system.qualite}}">{{item.name}}</td>
+                <td style="color:#666; font-size:0.9em;">Accessoire</td>
+                <td style="text-align:center;">1</td>
+                <td style="text-align:center;" class="quality-{{item.system.qualite}}">Q{{item.system.qualite}}</td>
+                <td style="text-align:right;">{{item.system.prix}} S</td>
+                <td class="controls-cell">
+                    <a class="item-control item-toggle" title="Mettre"><i class="far fa-circle"></i></a>
+                    <a class="item-control item-delete"><i class="fas fa-trash"></i></a>
+                </td>
+            </tr>
+            {{/each}}
+
+            {{#each inventory.stones as |item|}}
+            <tr class="item" data-item-id="{{item._id}}">
+                <td><img src="{{item.img}}"/></td>
+                <td class="item-edit clickable quality-{{item.system.qualite}}">{{item.name}}</td>
+                <td style="color:#9b59b6; font-size:0.9em;">Pierre Vrill</td>
+                <td style="text-align:center; font-weight:bold;">{{item.system.charges.value}}/{{item.system.charges.max}}</td>
+                <td style="text-align:center;" class="quality-{{item.system.qualite}}">Q{{item.system.qualite}}</td>
+                <td style="text-align:right;">{{item.system.prix}} S</td>
+                <td class="controls-cell">
+                    <a class="item-control item-toggle" title="Sertir (Équiper)"><i class="far fa-circle"></i></a>
+                    <a class="item-control item-delete"><i class="fas fa-trash"></i></a>
+                </td>
+            </tr>
+            {{/each}}
+
+            {{#each inventory.gear as |item|}}
+            <tr class="item" data-item-id="{{item._id}}">
+                <td><img src="{{item.img}}"/></td>
+                <td class="item-edit clickable quality-{{item.system.qualite}}">{{item.name}}</td>
+                <td style="color:#666; font-size:0.9em;">Objet</td>
+                <td style="text-align:center; font-weight:bold;">{{item.system.quantite}}</td>
+                <td style="text-align:center;" class="quality-{{item.system.qualite}}">Q{{item.system.qualite}}</td>
+                <td style="text-align:right;">{{item.system.prix}} S</td>
+                <td class="controls-cell">
+                    <a class="item-control item-delete"><i class="fas fa-trash"></i></a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

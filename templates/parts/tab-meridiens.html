@@ -1,0 +1,144 @@
+<div class="grid-meridiens-layout">
+    
+    <div class="meridiens-container">
+        
+        <div class="meridien-row internal-row">
+            {{#each system.meridiens as |meridien key|}}
+                {{#if (or (eq key "domination") (eq key "savoir") (eq key "expression"))}}
+                <div class="meridien-card internal">
+                    <h3 class="meridien-header">
+                        {{meridien.label}} 
+                        <input type="number" name="system.meridiens.{{key}}.value" value="{{meridien.value}}" min="1" max="10" class="meridien-input"/>
+                    </h3>
+                    
+                    <ul class="aptitudes-list">
+                        {{#each ../system.aptitudes as |apt aptKey|}}
+                            {{#if (eq apt.meridien key)}}
+                            <li class="aptitude flexrow">
+                                <label class="rollable" data-key="{{aptKey}}">{{apt.label}}</label>
+                                <input type="number" name="system.aptitudes.{{aptKey}}.value" value="{{apt.value}}"/>
+                            </li>
+                            {{/if}}
+                        {{/each}}
+                    </ul>
+                </div>
+                {{/if}}
+            {{/each}}
+        </div>
+
+        <div class="meridien-row physical-row">
+            {{#each system.meridiens as |meridien key|}}
+                {{#if (or (eq key "puissance") (eq key "mouvement") (eq key "vitalite"))}}
+                <div class="meridien-card physical">
+                    <h3 class="meridien-header">
+                        {{meridien.label}} 
+                        <input type="number" name="system.meridiens.{{key}}.value" value="{{meridien.value}}" min="1" max="10" class="meridien-input"/>
+                    </h3>
+
+                    <ul class="aptitudes-list">
+                        {{#each ../system.aptitudes as |apt aptKey|}}
+                            {{#if (eq apt.meridien key)}}
+                            <li class="aptitude flexrow">
+                                <label class="rollable" data-key="{{aptKey}}">{{apt.label}}</label>
+                                <input type="number" name="system.aptitudes.{{aptKey}}.value" value="{{apt.value}}"/>
+                            </li>
+                            {{/if}}
+                        {{/each}}
+                    </ul>
+                </div>
+                {{/if}}
+            {{/each}}
+        </div>
+
+    </div>
+
+    <div class="sidebar-container">
+        
+        <div class="action-grid grid-2col">
+            <button class="action-btn roll-chance"><i class="fas fa-dice-d20"></i> Chance</button>
+            <button class="action-btn roll-init"><i class="fas fa-bolt"></i> Initiative</button>
+            <button class="action-btn repos-court"><i class="fas fa-hourglass-half"></i> Repos Court</button>
+            <button class="action-btn repos-long"><i class="fas fa-bed"></i> Repos Long</button>
+        </div>
+
+        <hr>
+
+        <div class="sidebar-box">
+            <h3><i class="fas fa-fist-raised"></i> Armes Prêtes</h3>
+            <ul class="sidebar-list">
+                {{#each equippedWeapons as |item|}}
+                <li class="item flexrow roll-weapon" data-item-id="{{item._id}}" title="Cliquez pour attaquer">
+                    <img src="{{item.img}}" width="24" height="24"/>
+                    <span class="item-name">{{item.name}}</span>
+                    <span class="item-dmg">{{#if item.system.bonusDegats}}+{{item.system.bonusDegats}}{{else}}-{{/if}}</span>
+                </li>
+                {{/each}}
+                
+                {{#unless equippedWeapons}}
+                <li class="empty" style="text-align:center; font-style:italic; color:#777;">Aucune arme en main</li>
+                {{/unless}}
+            </ul>
+        </div>
+
+        <div class="sidebar-box" style="border-color: #9b59b6;">
+            <h3 style="background: rgba(155, 89, 182, 0.1); color: #9b59b6; border-bottom: 2px solid #9b59b6;"><i class="fas fa-gem"></i> Pierres de Vrill</h3>
+            <ul class="sidebar-list">
+                {{#each equippedStones as |item|}}
+                <li class="item flexrow" data-item-id="{{item._id}}">
+                    <img src="{{item.img}}" width="24" height="24"/>
+                    <span class="item-name" style="line-height:1.1; margin-left:5px;" title="{{item.system.effets}}">
+                        {{item.name}}<br>
+                        <span style="font-size:0.7em; color:#777; font-style:italic;">Sur : {{item.system.support}}</span>
+                    </span>
+                    <span style="font-weight:bold; color:#9b59b6; margin-right:10px;">+{{item.system.bonus}}</span>
+                    
+                    <a class="item-control use-stone" title="Libérer une charge (Reste: {{item.system.charges.value}}/{{item.system.charges.max}})" style="background:#9b59b6; color:white; padding:3px 6px; border-radius:3px;">
+                        <i class="fas fa-bolt"></i>
+                    </a>
+                </li>
+                {{/each}}
+                
+                {{#unless equippedStones}}
+                <li class="empty" style="text-align:center; font-style:italic; color:#777;">Aucune pierre sertie</li>
+                {{/unless}}
+            </ul>
+        </div>
+
+        <div class="sidebar-box defenses-box">
+            <h3><i class="fas fa-shield-alt"></i> Défenses</h3>
+            
+            <div class="defense-row">
+                <div class="defense-item">
+                    <label class="roll-defense" data-key="volonte" title="Défense Active (Volonté)">Volonté</label>
+                    <span class="def-val">{{defenses.volonte}}</span>
+                </div>
+                <div class="defense-item">
+                    <label class="roll-defense" data-key="sagesse" title="Défense Active (Sagesse)">Sagesse</label>
+                    <span class="def-val">{{defenses.sagesse}}</span>
+                </div>
+                <div class="defense-item">
+                    <label class="roll-defense" data-key="intuition" title="Défense Active (Intuition)">Intuition</label>
+                    <span class="def-val">{{defenses.intuition}}</span>
+                </div>
+            </div>
+            
+            <div class="sep-line"></div>
+
+            <div class="defense-row">
+                <div class="defense-item">
+                    <label class="roll-defense" data-key="vigueur" title="Défense Active (Vigueur)">Parer</label>
+                    <span class="def-val">{{defenses.parade}}</span>
+                </div>
+                <div class="defense-item">
+                    <label class="roll-defense" data-key="reflexe" title="Défense Active (Réflexe)">Esquiver</label>
+                    <span class="def-val">{{defenses.esquive}}</span>
+                </div>
+                <div class="defense-item">
+                    <label class="roll-defense" data-key="constitution" title="Défense Active (Constitution)">Encaisser</label>
+                    <span class="def-val">{{defenses.encaisse}}</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

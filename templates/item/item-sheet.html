@@ -1,0 +1,303 @@
+<form class="{{cssClass}}" autocomplete="off">
+    
+    <header class="sheet-header">
+        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+        <div class="header-fields">
+            <h1 class="charname">
+                <input name="name" type="text" value="{{item.name}}" placeholder="Nom de l'objet"/>
+            </h1>
+            <div class="item-subtitle">Type : {{item.type}}</div>
+        </div>
+    </header>
+
+<section class="sheet-body">
+
+        {{#if (eq item.type "potion")}}
+        <div class="potion-stats" style="background: rgba(0,0,0,0.05); padding: 10px; border-radius: 5px; margin-bottom: 10px; border: 1px solid #ccc;">
+            <div class="grid grid-3col" style="gap: 10px; text-align: center;">
+                <div class="form-group">
+                    <label style="font-weight:bold; display:block;">Qualité</label>
+                    <input type="number" name="system.qualite" value="{{system.qualite}}" style="width:50px; text-align:center;"/>
+                </div>
+                <div class="form-group">
+                    <label style="font-weight:bold; display:block;">Concentration</label>
+                    <input type="text" name="system.concentration" value="{{system.concentration}}" style="text-align:center;"/>
+                </div>
+                <div class="form-group">
+                    <label style="font-weight:bold; display:block;">Durée</label>
+                    <input type="text" name="system.duree" value="{{system.duree}}" style="text-align:center;"/>
+                </div>
+            </div>
+            <div class="grid grid-2col" style="gap: 10px; margin-top: 10px;">
+                <div class="form-group flexrow">
+                    <label>Prix (Sols)</label>
+                    <input type="number" name="system.prix" value="{{system.prix}}"/>
+                </div>
+                <div class="form-group flexrow">
+                    <label>Poids</label>
+                    <input type="number" name="system.poids" value="{{system.poids}}"/>
+                </div>
+            </div>
+        </div>
+        {{/if}}
+
+        <div class="tab description">
+            {{editor system.description target="system.description" button=true owner=owner editable=editable}}
+        </div>
+
+        {{#if (eq item.type "arme")}}
+        <div class="sheet-details">
+            <h3 class="section-header">Caractéristiques</h3>
+            <div class="form-group">
+                <label>Bonus Dégâts</label>
+                <input type="number" name="system.bonusDegats" value="{{system.bonusDegats}}"/>
+            </div>
+            <div class="form-group">
+                <label>Propriétés</label>
+                <input type="text" name="system.proprietes" value="{{system.proprietes}}"/>
+            </div>
+            <div class="grid grid-2col">
+                <div class="form-group">
+                    <label>Qualité</label>
+                    <select name="system.qualite" data-dtype="Number">
+                        {{selectOptions config.qualityLevels selected=system.qualite}}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Prix (Sol)</label>
+                    <input type="number" name="system.prix" value="{{system.prix}}"/>
+                </div>
+            </div>
+
+            <h3 class="section-header" style="margin-top:10px;"><i class="fas fa-gem"></i> Sertissage</h3>
+            <div class="form-group">
+                <label>Sertissable ?</label>
+                <input type="checkbox" name="system.sertissable" {{checked system.sertissable}}/>
+            </div>
+            {{#if system.sertissable}}
+            <div class="sertissage-box">
+                <div class="form-group">
+                    <label>Nb. Slots</label>
+                    <input type="number" name="system.slotsVrill" value="{{system.slotsVrill}}"/>
+                </div>
+                <div class="form-group">
+                    <label>Pierres</label>
+                    <input type="text" name="system.pierresSerties" value="{{system.pierresSerties}}"/>
+                </div>
+            </div>
+            {{/if}}
+        </div>
+        {{/if}}
+
+        {{#if (eq item.type "protection")}}
+        <div class="sheet-details">
+            <h3 class="section-header">Détails</h3>
+            <div class="form-group">
+                <label>Emplacement</label>
+                <select name="system.slot">
+                    {{selectOptions config.armorSlots selected=system.slot localize=true}}
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Propriétés</label>
+                <input type="text" name="system.proprietes" value="{{system.proprietes}}"/>
+            </div>
+            <div class="grid grid-2col">
+                <div class="form-group">
+                    <label>Qualité</label>
+                    <select name="system.qualite" data-dtype="Number">
+                        {{selectOptions config.qualityLevels selected=system.qualite}}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Prix (Sol)</label>
+                    <input type="number" name="system.prix" value="{{system.prix}}"/>
+                </div>
+            </div>
+
+            <h3 class="section-header" style="margin-top:10px;"><i class="fas fa-gem"></i> Sertissage</h3>
+            <div class="form-group">
+                <label>Sertissable ?</label>
+                <input type="checkbox" name="system.sertissable" {{checked system.sertissable}}/>
+            </div>
+            {{#if system.sertissable}}
+            <div class="sertissage-box">
+                <div class="form-group">
+                    <label>Nb. Slots</label>
+                    <input type="number" name="system.slotsVrill" value="{{system.slotsVrill}}"/>
+                </div>
+                <div class="form-group">
+                    <label>Pierres</label>
+                    <input type="text" name="system.pierresSerties" value="{{system.pierresSerties}}"/>
+                </div>
+            </div>
+            {{/if}}
+        </div>
+        {{/if}}
+
+        {{#if (eq item.type "accessoire")}}
+        <div class="sheet-details">
+            <h3 class="section-header">Accessoire</h3>
+            <div class="form-group">
+                <label>Propriétés</label>
+                <input type="text" name="system.proprietes" value="{{system.proprietes}}"/>
+            </div>
+            <div class="grid grid-2col">
+                <div class="form-group">
+                    <label>Qualité</label>
+                    <select name="system.qualite" data-dtype="Number">
+                        {{selectOptions config.qualityLevels selected=system.qualite}}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Prix (Sol)</label>
+                    <input type="number" name="system.prix" value="{{system.prix}}"/>
+                </div>
+            </div>
+
+            <h3 class="section-header" style="margin-top:10px;"><i class="fas fa-gem"></i> Sertissage</h3>
+            <div class="form-group">
+                <label>Sertissable ?</label>
+                <input type="checkbox" name="system.sertissable" {{checked system.sertissable}}/>
+            </div>
+            {{#if system.sertissable}}
+            <div class="sertissage-box">
+                <div class="form-group">
+                    <label>Nb. Slots</label>
+                    <input type="number" name="system.slotsVrill" value="{{system.slotsVrill}}"/>
+                </div>
+                <div class="form-group">
+                    <label>Pierres</label>
+                    <input type="text" name="system.pierresSerties" value="{{system.pierresSerties}}"/>
+                </div>
+            </div>
+            {{/if}}
+        </div>
+        {{/if}}
+
+        {{#if (eq item.type "pierreVrill")}}
+        <div class="sheet-details">
+            <h3 class="section-header"><i class="fas fa-gem"></i> Pierre de Vrill</h3>
+            
+            <div class="grid grid-2col" style="background: rgba(155, 89, 182, 0.1); padding: 5px; border-radius: 5px; margin-bottom: 10px; border: 1px solid #9b59b6;">
+                <div class="form-group">
+                    <label style="font-weight:bold; color:#8e44ad;">Sertie (Équipée) ?</label>
+                    <input type="checkbox" name="system.equipe" {{checked system.equipe}}/>
+                </div>
+                <div class="form-group">
+                    <label>Sertie sur :</label>
+                    <input type="text" name="system.support" value="{{system.support}}" placeholder="Ex: Épée longue"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Vertues</label>
+                <input type="text" name="system.vertues" value="{{system.vertues}}"/>
+            </div>
+            <div class="form-group">
+                <label>Qualité</label>
+                <select name="system.qualite" data-dtype="Number">
+                    {{selectOptions config.qualityLevels selected=system.qualite}}
+                </select>
+            </div>
+            <div class="grid grid-2col">
+                <div class="form-group">
+                    <label>Bonus (1-10)</label>
+                    <input type="number" name="system.bonus" value="{{system.bonus}}" min="1" max="10"/>
+                </div>
+                <div class="form-group">
+                    <label>Charges</label>
+                    <div style="display:flex; gap:5px; align-items:center;">
+                        <input type="number" name="system.charges.value" value="{{system.charges.value}}" min="0" style="text-align:center; font-weight:bold;"/>
+                        <span>/</span>
+                        <input type="number" name="system.charges.max" value="{{system.charges.max}}" min="1" style="text-align:center;"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Prix (Sol)</label>
+                <input type="number" name="system.prix" value="{{system.prix}}"/>
+            </div>
+            <div class="form-group-stacked">
+                <label style="font-weight:bold;">Effets (Affiché dans le Chat)</label>
+                <textarea name="system.effets" style="width:100%; height:80px;" placeholder="Ex: Ajoute +X aux tests liés au méridien du Mouvement.">{{system.effets}}</textarea>
+            </div>
+        </div>
+        {{/if}}
+
+        {{#if (eq item.type "objet")}}
+        <div class="sheet-details">
+            <div class="grid grid-2col">
+                <div class="form-group">
+                    <label>Quantité</label>
+                    <input type="number" name="system.quantite" value="{{system.quantite}}"/>
+                </div>
+                <div class="form-group">
+                    <label>Poids</label>
+                    <input type="number" name="system.poids" value="{{system.poids}}"/>
+                </div>
+                <div class="form-group">
+                    <label>Qualité</label>
+                    <select name="system.qualite" data-dtype="Number">
+                        {{selectOptions config.qualityLevels selected=system.qualite}}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Prix</label>
+                    <input type="number" name="system.prix" value="{{system.prix}}"/>
+                </div>
+            </div>
+        </div>
+        {{/if}}
+
+        {{#if (eq item.type "pukllay")}}
+        <div class="pukllay-sheet" style="padding: 10px;">
+            <div style="display:flex; gap: 20px;">
+                <div style="flex:1;">
+                    <div class="form-group">
+                        <label>Famille</label>
+                        <input type="text" name="system.famille" value="{{system.famille}}" placeholder="Ex: Loup, Serpent..."/>
+                    </div>
+                    <div class="form-group">
+                        <label>Qualité / Rareté</label>
+                        <select name="system.qualite">
+                            {{selectOptions config.qualityLevels selected=system.qualite}}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Pouvoir Actif (Pose)</label>
+                        <input type="text" name="system.pouvoirs.actif" value="{{system.pouvoirs.actif}}" placeholder="Ex: renfort"/>
+                    </div>
+                    <div class="form-group">
+                        <label>Pouvoir Passif (Défense)</label>
+                        <input type="text" name="system.pouvoirs.passif" value="{{system.pouvoirs.passif}}" placeholder="Ex: soutien"/>
+                    </div>
+                </div>
+
+                <div style="flex:0 0 150px; text-align:center;">
+                    <label style="font-weight:bold; display:block; margin-bottom:5px;">Vecteurs d'Attaque</label>
+                    <div class="pukllay-grid" style="display:grid; grid-template-columns: 30px 40px 30px; grid-template-rows: 30px 40px 30px; gap:5px; justify-content:center; background:#ccc; padding:10px; border-radius:8px; border:2px solid #333;">
+                        <div class="grid-cell"><input type="checkbox" name="system.directions.no" {{checked system.directions.no}} title="Nord-Ouest"></div>
+                        <div class="grid-cell"><input type="checkbox" name="system.directions.n" {{checked system.directions.n}} title="Nord"></div>
+                        <div class="grid-cell"><input type="checkbox" name="system.directions.ne" {{checked system.directions.ne}} title="Nord-Est"></div>
+                        <div class="grid-cell"><input type="checkbox" name="system.directions.o" {{checked system.directions.o}} title="Ouest"></div>
+                        <div class="grid-cell center" style="background:#222; display:flex; align-items:center; justify-content:center; border-radius:4px;">
+                            <input type="number" name="system.force" value="{{system.force}}" style="width:35px; text-align:center; font-weight:bold; color:#d6982d; border:none; background:transparent;">
+                        </div>
+                        <div class="grid-cell"><input type="checkbox" name="system.directions.e" {{checked system.directions.e}} title="Est"></div>
+                        <div class="grid-cell"><input type="checkbox" name="system.directions.so" {{checked system.directions.so}} title="Sud-Ouest"></div>
+                        <div class="grid-cell"><input type="checkbox" name="system.directions.s" {{checked system.directions.s}} title="Sud"></div>
+                        <div class="grid-cell"><input type="checkbox" name="system.directions.se" {{checked system.directions.se}} title="Sud-Est"></div>
+                    </div>
+                    <p style="font-size:0.8em; color:#666; margin-top:5px;">Cochez les flèches actives.</p>
+                </div>
+            </div>
+        </div>
+        {{/if}}
+
+        <div class="description-section">
+            <h3 class="section-header">Description</h3>
+            {{editor system.description target="system.description" button=true owner=owner editable=editable}}
+        </div>
+    </section>
+</form>

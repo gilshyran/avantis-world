@@ -1,0 +1,55 @@
+<div class="avantis-armor-smith">
+    <div id="overlay">
+        <main id="generator-container">
+            <header>
+                <h1>Le Façonneur de Protections</h1>
+                <p id="narrator-text" class="narrator">Le marteau frappe l'acier, l'aiguille perce le cuir...</p>
+            </header>
+
+            <section id="controls-section">
+                <div class="control-group">
+                    <label>Emplacement</label>
+                    <select id="armor-slot">
+                        <option value="tete">Tête (Casque/Heaume)</option>
+                        <option value="torse">Torse (Plastron/Veste)</option>
+                        <option value="bras">Bras (Gantelets)</option>
+                        <option value="jambes">Jambes (Grèves/Bottes)</option>
+                        <option value="integral">Intégrale (Tenue Complète)</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label>Qualité</label>
+                    <select id="armor-quality">
+                        <option value="q1" selected>1 - Standard</option>
+                        <option value="q2">2 - Bonne</option>
+                        <option value="q3">3 - Supérieure</option>
+                        <option value="q4">4 - Exceptionnelle</option>
+                        <option value="legendary">Légendaire</option>
+                    </select>
+                </div>
+                <button id="generate-btn"><i class="fas fa-shield-alt"></i> Façonner</button>
+            </section>
+
+            <section id="sheet-section" class="hidden">
+                <div id="armor-sheet">
+                    <div class="sheet-header">
+                        <input type="text" id="armor-name" value="Nom de l'Objet">
+                        <div class="header-details">
+                            <span id="armor-type-display">Type</span>
+                            <span>|</span>
+                            <span id="armor-quality-display">Qualité</span>
+                            <span>|</span>
+                            <span>Prix : <strong id="armor-price">0</strong> Sol(s)</span>
+                        </div>
+                    </div>
+                    
+                    <div id="properties-list"></div>
+                    
+                    <div id="generated-desc" style="margin-top:15px; font-style:italic; color:#555; border-top:1px solid #ccc; padding-top:10px;"></div>
+
+                    <button id="create-item-btn"><i class="fas fa-check"></i> Ajouter à l'Inventaire</button>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>

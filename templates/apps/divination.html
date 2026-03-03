@@ -1,0 +1,37 @@
+<div class="divination-container">
+    
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="vision">La Vision</a>
+        <a class="item" data-tab="tarot">Cartomancie</a>
+    </nav>
+
+    <section class="content">
+        
+        <div class="tab" data-tab="vision">
+            <p class="instruction">
+                <strong>Règle d'Or :</strong> Si réussi, le destin est scellé. Si raté, la voie est fermée à jamais.
+            </p>
+            <div class="form-group">
+                <label>Intention :</label>
+                <textarea placeholder="Ex: Je veux voir si nous vaincrons le Capitaine Silas..."></textarea>
+            </div>
+            <div class="roll-area">
+                <button id="roll-vision-btn"><i class="fas fa-eye"></i> Tenter de Percer le Voile</button>
+            </div>
+            <div id="vision-result" class="result-box hidden"></div>
+        </div>
+
+        <div class="tab" data-tab="tarot">
+            <p class="instruction">Posez une question ouverte, puis tirez deux cartes.</p>
+            <div class="roll-area">
+                <button id="draw-cards-btn"><i class="fas fa-cards"></i> Tirer les Cartes</button>
+            </div>
+            <div id="tarot-display" class="cards-layout">
+                </div>
+            <p id="tarot-instruction" class="hidden" style="text-align:center; font-style:italic; margin-top:10px;">
+                "L'interprétation appartient à ceux qui écoutent..."
+            </p>
+        </div>
+
+    </section>
+</div>

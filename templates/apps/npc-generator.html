@@ -1,0 +1,98 @@
+<div class="avantis-npc-generator">
+    <div id="overlay">
+        <main id="generator-container">
+            <header>
+                <h1>Générateur d'Antagonistes & PNJ</h1>
+                <p class="narrator">Donnez vie aux habitants de Khora en quelques clics...</p>
+            </header>
+
+            <section id="controls-section">
+                <div class="control-row">
+                    <div class="control-group">
+                        <label>Type</label>
+                        <select id="npc-type">
+                            <option value="Antagoniste">Antagoniste (Hostile)</option>
+                            <option value="Neutre">Neutre (Civil)</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label>Archétype</label>
+                        <select id="npc-archetype"></select>
+                    </div>
+                    <div class="control-group" id="level-group">
+                        <label>Rang/Niveau</label>
+                        <select id="npc-level"></select>
+                    </div>
+                </div>
+
+                <div class="control-row">
+                    <div class="control-group">
+                        <label>Origine</label>
+                        <select id="npc-origin"></select>
+                    </div>
+                    <div class="control-group">
+                        <label>Apparence</label>
+                        <select id="npc-appearance">
+                            <option value="Masculine">Masculine</option>
+                            <option value="Féminine">Féminine</option>
+                            <option value="Androgyne">Androgyne</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button id="generate-btn"><i class="fas fa-users"></i> Générer le Personnage</button>
+            </section>
+
+            <section id="sheet-section" class="hidden">
+                <div id="character-sheet">
+                    <div class="sheet-header">
+                        <input type="text" id="npc-name" value="Nom du PNJ">
+                        <div class="header-details">
+                            <span id="npc-archetype-display">Archétype</span>
+                            <span>|</span>
+                            <span id="npc-level-display">Niveau</span>
+                            <span>|</span>
+                            <span id="npc-rank-display">Rang X</span>
+                        </div>
+                    </div>
+
+                    <div class="sheet-body">
+                        <div class="stat-column">
+                            <h3>Méridiens</h3>
+                            <div class="stats-grid">
+                                <div class="stat-item"><span>Domination</span><strong id="stat-domination">0</strong></div>
+                                <div class="stat-item"><span>Savoir</span><strong id="stat-savoir">0</strong></div>
+                                <div class="stat-item"><span>Expression</span><strong id="stat-expression">0</strong></div>
+                                <div class="stat-item"><span>Puissance</span><strong id="stat-puissance">0</strong></div>
+                                <div class="stat-item"><span>Mouvement</span><strong id="stat-mouvement">0</strong></div>
+                                <div class="stat-item"><span>Vitalité</span><strong id="stat-vitalite">0</strong></div>
+                            </div>
+                            <div class="vrill-gauges">
+                                <div class="vrill-gauge pvi">🌀 PVI <strong id="pvi-total">0</strong></div>
+                                <div class="vrill-gauge pve">🔥 PVE <strong id="pve-total">0</strong></div>
+                            </div>
+                        </div>
+
+                        <div class="loot-column">
+                            <h3>Équipement & Butin</h3>
+                            <div class="loot-group">
+                                <h4><i class="fas fa-fist-raised"></i> Armes</h4>
+                                <ul id="loot-arme"></ul>
+                            </div>
+                            <div class="loot-group">
+                                <h4><i class="fas fa-tshirt"></i> Tenue</h4>
+                                <ul id="loot-tenue"></ul>
+                            </div>
+                            <div class="loot-group">
+                                <h4><i class="fas fa-gem"></i> Divers</h4>
+                                <ul id="loot-supplementaire"></ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button id="create-actor-btn"><i class="fas fa-user-plus"></i> Créer ce PNJ</button>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>

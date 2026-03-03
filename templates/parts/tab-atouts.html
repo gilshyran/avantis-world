@@ -1,0 +1,29 @@
+<div class="atouts-wrapper">
+    
+    <div class="table-actions" style="text-align: right; margin-bottom: 15px;">
+        <button type="button" class="action-btn atout-add-dialog" style="width: auto; padding: 5px 15px; font-size: 1.1em;">
+            <i class="fas fa-plus"></i> Ajouter un Atout
+        </button>
+    </div>
+
+    <div class="atouts-grid">
+        {{#each atouts as |atout i|}}
+        <div class="atout-card">
+            <div class="atout-header">
+                <h4 class="atout-title">{{atout.name}}</h4>
+                <a class="atout-delete" data-index="{{i}}" title="Supprimer l'atout"><i class="fas fa-trash"></i></a>
+            </div>
+            <div class="atout-body">
+                {{atout.desc}}
+            </div>
+        </div>
+        {{/each}}
+        
+        {{#unless atouts}}
+        <div style="text-align: center; font-style: italic; color: #777; grid-column: 1 / -1; padding: 20px;">
+            Aucun Atout pour le moment.
+        </div>
+        {{/unless}}
+    </div>
+
+</div>

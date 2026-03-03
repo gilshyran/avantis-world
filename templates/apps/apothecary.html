@@ -1,0 +1,110 @@
+<div class="avantis-apothecary">
+    <div id="overlay">
+        <main id="generator-container">
+            <header>
+                <h1>L'Atelier de l'Apothicaire</h1>
+                <p id="narrator-text" class="narrator">Choisissez une méthode et assemblez les composants...</p>
+            </header>
+
+            <section id="main-controls">
+                <div class="tabs">
+                    <button class="tab-btn active" data-mode="creation">Création</button>
+                    <button class="tab-btn" data-mode="fusion">Fusion</button>
+                </div>
+                <div class="control-group">
+                    <label for="potion-quality">Qualité de la Potion</label>
+                    <select id="potion-quality">
+                        <option value="1">Qualité 1</option>
+                        <option value="2" selected>Qualité 2</option>
+                        <option value="3">Qualité 3</option>
+                        <option value="4">Qualité 4</option>
+                    </select>
+                </div>
+                <div class="control-group-checkbox">
+                    <input type="checkbox" id="master-workshop-toggle">
+                    <label for="master-workshop-toggle">Atelier de Maître</label>
+                </div>
+            </section>
+
+            <section id="workspace">
+                <div id="components-panel">
+                    <div id="creation-view" class="component-view active">
+                        <h3>Ingrédients</h3>
+                        <div class="ingredient-slot">
+                            <select class="ingredient-select" data-slot="0"></select>
+                            <div class="property-preview" data-slot="0"></div>
+                        </div>
+                        <div class="ingredient-slot">
+                            <select class="ingredient-select" data-slot="1"></select>
+                            <div class="property-preview" data-slot="1"></div>
+                        </div>
+                        <div class="ingredient-slot">
+                            <select class="ingredient-select" data-slot="2"></select>
+                            <div class="property-preview" data-slot="2"></div>
+                        </div>
+                        <div class="ingredient-slot">
+                            <select class="ingredient-select" data-slot="3"></select>
+                            <div class="property-preview" data-slot="3"></div>
+                        </div>
+                    </div>
+
+                    <div id="fusion-view" class="component-view hidden">
+                        <h3>Fusion de Potions (Glisser-Déposer)</h3>
+                        <p class="narrator" style="font-size:0.8em; margin-bottom:10px;">Glissez des potions depuis votre inventaire dans les cases ci-dessous.</p>
+                        
+                        <div class="ingredient-slot drop-zone" data-slot="0">
+                            <span class="placeholder"><i class="fas fa-flask"></i> Potion 1</span>
+                            <div class="property-preview" data-slot="0"></div>
+                            <i class="fas fa-times clear-slot hidden" data-slot="0" title="Retirer"></i>
+                        </div>
+                        <div class="ingredient-slot drop-zone" data-slot="1">
+                            <span class="placeholder"><i class="fas fa-flask"></i> Potion 2</span>
+                            <div class="property-preview" data-slot="1"></div>
+                            <i class="fas fa-times clear-slot hidden" data-slot="1" title="Retirer"></i>
+                        </div>
+                        <div class="ingredient-slot drop-zone" data-slot="2">
+                            <span class="placeholder"><i class="fas fa-flask"></i> Potion 3</span>
+                            <div class="property-preview" data-slot="2"></div>
+                            <i class="fas fa-times clear-slot hidden" data-slot="2" title="Retirer"></i>
+                        </div>
+                        <div class="ingredient-slot drop-zone" data-slot="3">
+                            <span class="placeholder"><i class="fas fa-flask"></i> Potion 4</span>
+                            <div class="property-preview" data-slot="3"></div>
+                            <i class="fas fa-times clear-slot hidden" data-slot="3" title="Retirer"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="action-panel">
+                    <img src="systems/avantis/assets/icons/potion-cauldron.webp" alt="" style="display:none;"> 
+                    <button id="generate-btn"><i class="fas fa-flask"></i> Préparer</button>
+                </div>
+
+                <div id="result-panel" class="hidden">
+                    <div id="potion-sheet">
+                        <h2 id="potion-name">Nom de la Potion</h2>
+                        <div class="potion-details">
+                            <span id="potion-quality-display">Qualité X</span> | 
+                            <span id="potion-concentration-display">Concentration X%</span> | 
+                            <span id="potion-duration-display">Durée X</span>
+                        </div>
+                        <div id="potion-properties"></div>
+                    </div>
+                    <button id="create-item-btn"><i class="fas fa-check"></i> Créer l'Objet dans l'Inventaire</button>
+                </div>
+            </section>
+
+            <div id="property-selector-modal" class="hidden">
+                 <div class="modal-content">
+                    <h3 id="property-selector-title">Choisissez vos propriétés</h3>
+                    <p id="property-selector-info"></p>
+                    <div id="property-selector-list"></div>
+                    <div class="modal-buttons">
+                        <button id="property-selector-cancel">Annuler</button>
+                        <button id="property-selector-confirm">Confirmer la Création</button>
+                    </div>
+                 </div>
+            </div>
+        </main>
+    </div>
+</div>
