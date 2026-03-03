@@ -22,8 +22,8 @@
   "secondaryTokenAttribute": "pve",
   "background": "systems/avantis/icons/Data/logo%20AW2021.png",
   "url": "https://avantis.world",
-  "manifest": "",
-  "download": "",
+  "manifest": "https://raw.githubusercontent.com/gilshyran/avantis-world/main/system.json",
+  "download": "https://github.com/gilshyran/avantis-world/archive/refs/tags/v1.0.0.zip",
   "packs": [
 
     {
